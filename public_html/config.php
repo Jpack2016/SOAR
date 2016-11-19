@@ -11,7 +11,7 @@ $homeUrl = 'http://lamp.cse.fau.edu/~fsoares2014/';  //return to home
 ##################################
 
 $gClient = new Google_Client();
-$gClient->setApplicationName('Login to codexworld.com');
+$gClient->setApplicationName('Login to SOAR');
 $gClient->setClientId($clientId);
 $gClient->setClientSecret($clientSecret);
 $gClient->setRedirectUri($redirectUrl);
