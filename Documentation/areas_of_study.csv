@@ -1,0 +1,234 @@
+insert into ref_study_are set (study_area_name) values (',Criminal Justice,);
+insert into ref_study_are set (study_area_name) values (',Nonprofit Management,);
+insert into ref_study_are set (study_area_name) values (',Public Management,);
+insert into ref_study_are set (study_area_name) values (',Anthropology,);
+insert into ref_study_are set (study_area_name) values (',Art History,);
+insert into ref_study_are set (study_area_name) values (',Communication Studies,);
+insert into ref_study_are set (study_area_name) values (',Comparative Literature,);
+insert into ref_study_are set (study_area_name) values (',English,);
+insert into ref_study_are set (study_area_name) values (',French,);
+insert into ref_study_are set (study_area_name) values (',German,);
+insert into ref_study_are set (study_area_name) values (',History,);
+insert into ref_study_are set (study_area_name) values (',Italian,);
+insert into ref_study_are set (study_area_name) values (',Linguistics,);
+insert into ref_study_are set (study_area_name) values (',Music,);
+insert into ref_study_are set (study_area_name) values (',Philosophy,);
+insert into ref_study_are set (study_area_name) values (',Political Science,);
+insert into ref_study_are set (study_area_name) values (',Sociology,);
+insert into ref_study_are set (study_area_name) values (',Spanish,);
+insert into ref_study_are set (study_area_name) values (',Studio Art,);
+insert into ref_study_are set (study_area_name) values (',Accounting,);
+insert into ref_study_are set (study_area_name) values (',Business Administration,);
+insert into ref_study_are set (study_area_name) values (',Economics,);
+insert into ref_study_are set (study_area_name) values (',Electronic Commerce,);
+insert into ref_study_are set (study_area_name) values (',Finance,);
+insert into ref_study_are set (study_area_name) values (',Health Services Administration,);
+insert into ref_study_are set (study_area_name) values (',Hospitality and Tourism Management,);
+insert into ref_study_are set (study_area_name) values (',Information Security,);
+insert into ref_study_are set (study_area_name) values (',International Economics,);
+insert into ref_study_are set (study_area_name) values (',Management Information Systems,);
+insert into ref_study_are set (study_area_name) values (',Marketing,);
+insert into ref_study_are set (study_area_name) values (',Real Estate,);
+insert into ref_study_are set (study_area_name) values (',Computer Science,);
+insert into ref_study_are set (study_area_name) values (',Biological Sciences,);
+insert into ref_study_are set (study_area_name) values (',Geographic Information Science,);
+insert into ref_study_are set (study_area_name) values (',Geography,);
+insert into ref_study_are set (study_area_name) values (',Geology,);
+insert into ref_study_are set (study_area_name) values (',Mathematical Sciences,);
+insert into ref_study_are set (study_area_name) values (',Physics,);
+insert into ref_study_are set (study_area_name) values (',Psychology,);
+insert into ref_study_are set (study_area_name) values (',Statistics,);
+insert into ref_study_are set (study_area_name) values (',Caribbean and Latin American Studies,);
+insert into ref_study_are set (study_area_name) values (',Classical Studies,);
+insert into ref_study_are set (study_area_name) values (',English as a Second Language (ESL) Studies,);
+insert into ref_study_are set (study_area_name) values (',"Ethics, Law, and Society",);
+insert into ref_study_are set (study_area_name) values (',Ethnic Studies,);
+insert into ref_study_are set (study_area_name) values (',Film and Video,);
+insert into ref_study_are set (study_area_name) values (',Jewish Studies,);
+insert into ref_study_are set (study_area_name) values (',Peace Studies,);
+insert into ref_study_are set (study_area_name) values (',Religious Studies,);
+insert into ref_study_are set (study_area_name) values (',Women’s Studies,);
+insert into ref_study_are set (study_area_name) values (',International Business,);
+insert into ref_study_are set (study_area_name) values (',Gerontology,);
+insert into ref_study_are set (study_area_name) values (',Actuarial Science,);
+insert into ref_study_are set (study_area_name) values (',Biotechnology,);
+insert into ref_study_are set (study_area_name) values (',Environmental Studies,);
+insert into ref_study_are set (study_area_name) values (',Geographic Information Systems (GIS),);
+insert into ref_study_are set (study_area_name) values (',GIS Advanced,);
+insert into ref_study_are set (study_area_name) values (',Pre-Health Professions Studies,);
+insert into ref_study_are set (study_area_name) values (',Architecture,);
+insert into ref_study_are set (study_area_name) values (',Art: Studio Art,);
+insert into ref_study_are set (study_area_name) values (',Art: Graphic Design,);
+insert into ref_study_are set (study_area_name) values (',Art History ,);
+insert into ref_study_are set (study_area_name) values (',Chemistry,);
+insert into ref_study_are set (study_area_name) values (',Civil Engineering,);
+insert into ref_study_are set (study_area_name) values (',Commercial Music,);
+insert into ref_study_are set (study_area_name) values (',Computer Engineering,);
+insert into ref_study_are set (study_area_name) values (',Early Care and Education,);
+insert into ref_study_are set (study_area_name) values (',Electrical Engineering,);
+insert into ref_study_are set (study_area_name) values (',Elementary Education,);
+insert into ref_study_are set (study_area_name) values (',Environmental Engineering,);
+insert into ref_study_are set (study_area_name) values (',Exceptional Student Education,);
+insert into ref_study_are set (study_area_name) values (',Exercise Science and Health Promotion,);
+insert into ref_study_are set (study_area_name) values (',General Studies,);
+insert into ref_study_are set (study_area_name) values (',Geomatics Engineering,);
+insert into ref_study_are set (study_area_name) values (',Health Administration,);
+insert into ref_study_are set (study_area_name) values (',Hospitality Management,);
+insert into ref_study_are set (study_area_name) values (',Interdisciplinary Studies,);
+insert into ref_study_are set (study_area_name) values (',International Business & Trade,);
+insert into ref_study_are set (study_area_name) values (',Languages and Linguistics,);
+insert into ref_study_are set (study_area_name) values (',Languages and Linguistics: Italian,);
+insert into ref_study_are set (study_area_name) values (',Liberal Arts and Science,);
+insert into ref_study_are set (study_area_name) values (',Management,);
+insert into ref_study_are set (study_area_name) values (',Mechanical Engineering,);
+insert into ref_study_are set (study_area_name) values (',Multimedia Studies,);
+insert into ref_study_are set (study_area_name) values (',Performance,);
+insert into ref_study_are set (study_area_name) values (',Music Education,);
+insert into ref_study_are set (study_area_name) values (',Neuroscience and Behavior,);
+insert into ref_study_are set (study_area_name) values (',Nursing,);
+insert into ref_study_are set (study_area_name) values (',Ocean Engineering,);
+insert into ref_study_are set (study_area_name) values (',Online B.B.A.,);
+insert into ref_study_are set (study_area_name) values (',Public Safety Administration,);
+insert into ref_study_are set (study_area_name) values (',"Secondary Education (English, Math, Music, Social Science, Science: Chemistry, Biology, Physics)",);
+insert into ref_study_are set (study_area_name) values (',Social Work,);
+insert into ref_study_are set (study_area_name) values (',Teacher Certification,);
+insert into ref_study_are set (study_area_name) values (',Art,);
+insert into ref_study_are set (study_area_name) values (',Theatre,);
+insert into ref_study_are set (study_area_name) values (',Urban Design,);
+insert into ref_study_are set (study_area_name) values (',Urban and Regional Planning Advanced Standing Program,);
+insert into ref_study_are set (study_area_name) values (',Aging,);
+insert into ref_study_are set (study_area_name) values (',Applied Mental Health Services,);
+insert into ref_study_are set (study_area_name) values (',Asian Studies,);
+insert into ref_study_are set (study_area_name) values (',Business Analytics,);
+insert into ref_study_are set (study_area_name) values (',Child Welfare,);
+insert into ref_study_are set (study_area_name) values (',Club Management,);
+insert into ref_study_are set (study_area_name) values (',Digital Marketing,);
+insert into ref_study_are set (study_area_name) values (',Environmental Science,);
+insert into ref_study_are set (study_area_name) values (',Healthcare Information Systems,);
+insert into ref_study_are set (study_area_name) values (',Meetings and Events Management,);
+insert into ref_study_are set (study_area_name) values (',"Peace, Justice and Human Rights",);
+insert into ref_study_are set (study_area_name) values (',Professional and Technical Writing,);
+insert into ref_study_are set (study_area_name) values (',Religious Studies,);
+insert into ref_study_are set (study_area_name) values (',Risk Management and Insurance,);
+insert into ref_study_are set (study_area_name) values (',Surverying & Mapping,);
+insert into ref_study_are set (study_area_name) values (',"Women, Gender, and Sexuality Studies",);
+insert into ref_study_are set (study_area_name) values (',Architecture & Urban and Regional Planning Advanced Standing Program,);
+insert into ref_study_are set (study_area_name) values (',Biological Sciences/Environmental Science,);
+insert into ref_study_are set (study_area_name) values (',"Civil, Computer, Electrical, Mechanical or Ocean Engineering or Computer Science/Bioengineering",);
+insert into ref_study_are set (study_area_name) values (',Management Information Systems/Information Technology and Management,);
+insert into ref_study_are set (study_area_name) values (',Physics/Medical Physics,);
+insert into ref_study_are set (study_area_name) values (',Urban Design & Urban and Regional Planning Advanced Standing Program,);
+insert into ref_study_are set (study_area_name) values (',Executive Accounting,);
+insert into ref_study_are set (study_area_name) values (',Applied Mathematics and Statistics,);
+insert into ref_study_are set (study_area_name) values (',Biomedical Sciences,);
+insert into ref_study_are set (study_area_name) values (',Bioengineering,);
+insert into ref_study_are set (study_area_name) values (',Business Administration (General MBA),);
+insert into ref_study_are set (study_area_name) values (',Executive M.B.A.,);
+insert into ref_study_are set (study_area_name) values (',Professional M.B.A.,);
+insert into ref_study_are set (study_area_name) values (',Business Biotechnology,);
+insert into ref_study_are set (study_area_name) values (',Communication,);
+insert into ref_study_are set (study_area_name) values (',Counselor Education,);
+insert into ref_study_are set (study_area_name) values (',Creative Writing,);
+insert into ref_study_are set (study_area_name) values (',Criminology and Criminal Justice,);
+insert into ref_study_are set (study_area_name) values (',Curriculum and Instruction,);
+insert into ref_study_are set (study_area_name) values (',Educational Leadership,);
+insert into ref_study_are set (study_area_name) values (',Educational Psychology,);
+insert into ref_study_are set (study_area_name) values (',Environmental Education,);
+insert into ref_study_are set (study_area_name) values (',Finance  (Executive Program),);
+insert into ref_study_are set (study_area_name) values (',Geosciences,);
+insert into ref_study_are set (study_area_name) values (',Executive Health Administration,);
+insert into ref_study_are set (study_area_name) values (',Information Technology and Management,);
+insert into ref_study_are set (study_area_name) values (',Instructional Technology,);
+insert into ref_study_are set (study_area_name) values (',"Languages, Linguistics and Comparative Literature",);
+insert into ref_study_are set (study_area_name) values (',"Media, Technology, and Entertainment",);
+insert into ref_study_are set (study_area_name) values (',Medical Physics,);
+insert into ref_study_are set (study_area_name) values (',Online Executive M.B.A.,);
+insert into ref_study_are set (study_area_name) values (',Public Administration,);
+insert into ref_study_are set (study_area_name) values (',Reading Education,);
+insert into ref_study_are set (study_area_name) values (',Secondary Education plus Certification,);
+insert into ref_study_are set (study_area_name) values (',Speech - Language Pathology/Audiology,);
+insert into ref_study_are set (study_area_name) values (',Taxation,);
+insert into ref_study_are set (study_area_name) values (',Executive Taxation,);
+insert into ref_study_are set (study_area_name) values (',Urban & Regional Planning,);
+insert into ref_study_are set (study_area_name) values (',"Visual Art: Fine Art, Graphic Design",);
+insert into ref_study_are set (study_area_name) values (',"Women, Gender and Sexuality Studies",);
+insert into ref_study_are set (study_area_name) values (',Adult/ Gerontological Nurse Practitioner,);
+insert into ref_study_are set (study_area_name) values (',Advanced Holistic Nursing,);
+insert into ref_study_are set (study_area_name) values (',Big Data Analytics,);
+insert into ref_study_are set (study_area_name) values (',Biomedical Science,);
+insert into ref_study_are set (study_area_name) values (',Clinical Nurse Leader,);
+insert into ref_study_are set (study_area_name) values (',Corrosion,);
+insert into ref_study_are set (study_area_name) values (',Cyber Security,);
+insert into ref_study_are set (study_area_name) values (',Economic Development and Tourism,);
+insert into ref_study_are set (study_area_name) values (',Environmental Restoration,);
+insert into ref_study_are set (study_area_name) values (',Family Nurse Practitioner,);
+insert into ref_study_are set (study_area_name) values (',Film and Culture,);
+insert into ref_study_are set (study_area_name) values (',Geographic Information Systems,);
+insert into ref_study_are set (study_area_name) values (',Innovation Entrepreneurship,);
+insert into ref_study_are set (study_area_name) values (',Marine Engineering Management,);
+insert into ref_study_are set (study_area_name) values (',Neuroscience,);
+insert into ref_study_are set (study_area_name) values (',Nursing Administration and Financial Leadership,);
+insert into ref_study_are set (study_area_name) values (',Nurse Educator,);
+insert into ref_study_are set (study_area_name) values (',Professional Accounting,);
+insert into ref_study_are set (study_area_name) values (',Remote Sensing,);
+insert into ref_study_are set (study_area_name) values (',Risk Management,);
+insert into ref_study_are set (study_area_name) values (',Sustainable Community Planning,);
+insert into ref_study_are set (study_area_name) values (',Teacher Leadership,);
+insert into ref_study_are set (study_area_name) values (',Transportation Engineering,);
+insert into ref_study_are set (study_area_name) values (',"Women, Gender, & Sexuality Studies",);
+insert into ref_study_are set (study_area_name) values (',Comparative Studies,);
+insert into ref_study_are set (study_area_name) values (',Complex Systems and Brain Sciences,);
+insert into ref_study_are set (study_area_name) values (',Experimental Psychology,);
+insert into ref_study_are set (study_area_name) values (',Integrative Biology,);
+insert into ref_study_are set (study_area_name) values (',Medicine,);
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,

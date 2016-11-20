@@ -46,12 +46,14 @@ right: 0;
 </head>
 <body>
 <h1>Welcome to SOAR </h1>
-
+<div></div>
+<div>
 <button class="button" style="vertical-align:middle"><span>Create Resume </span></button>
 <button class="button" style="vertical-align:middle"><span>Edit Resume </span></button>
 <button class="button" style="vertical-align:middle"><span>Search Database </span></button>
+</div>
 
-<!-- 
+<!--
 <div class="wrapper">
     <h1>Google Profile Details </h1>
     <?php
