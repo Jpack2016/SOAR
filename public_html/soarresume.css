@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  background-repeat: no-repeat;
+	background-size: cover;
+}
+p {
+  text-align: left;
+  color: black;
+}
+h1 {
+  text-align: left;
+  color: #950442;
+  padding-bottom: 1%;
+}
+h2 {
+  text-align: left;
+  color: #950442;
+  padding-bottom: 1%;
+}
+h3 {
+  text-align: left;
+  color: #950442;
+}
+textarea{
+  text-align: center;
+}
+table {
+  border-spacing: 2%;
+}
+#basicinfo{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+#fieldsofstudy{
+  padding-bottom: 2%;
+}
+#skills{
+  padding-bottom: 2%;
+}
+#spacing{
+  padding-top: 4%;
+}
+#workexperience{
+  padding-bottom: 2%;
+}
+#surveyinfo {
+  background: #D7D1E9;
+  width: 45%;
+  margin: auto;
+}
+a:hover {
+  color: red;
+}
