@@ -4,12 +4,10 @@ SOAR - A resume builder
 <head>
 <style>
 .button {
-display: inline-block;
 border-radius: 4px;
 background-color: #f4511e;
 border: none;
 color: #FFFFFF;
-text-align: center;
 font-size: 28px;
 padding: 20px;
 width: 200px;
@@ -42,16 +40,25 @@ padding-right: 25px;
 opacity: 1;
 right: 0;
 }
+.stylez{
+        list-style: none;
+        text-align: center;
+    
+    }
+li{
+        display: inline-block;
+        margin: 2%;
+    }
 </style>
 </head>
 <body>
-<h1>Welcome to SOAR </h1>
-<div></div>
-<div>
-<button class="button" style="vertical-align:middle"><span>Create Resume </span></button>
-<button class="button" style="vertical-align:middle"><span>Edit Resume </span></button>
-<button class="button" style="vertical-align:middle"><span>Search Database </span></button>
-</div>
+<h1 style="text-align:center; font-size:55px;">Welcome to SOAR </h1>
+
+<ul class="stylez">
+    <li><button class="button"><span>Create Resume </span></button></li>
+    <li><button class="button"><span>Edit Resume </span></button></li>
+    <li><button class="button"><span>Search Database </span></button></li>
+</ul>
 
 <!--
 <div class="wrapper">
