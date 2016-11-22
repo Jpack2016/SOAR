@@ -21,5 +21,3 @@ CREATE table ref_study_area (id INT NOT NULL AUTO_INCREMENT, study_area_name var
 CREATE table ref_job_position (id INT NOT NULL AUTO_INCREMENT, position_name varchar(30), PRIMARY KEY (id));
 
 CREATE table ref_degree (id INT NOT NULL AUTO_INCREMENT, degree_name varchar(30), PRIMARY KEY (id));
-
-
