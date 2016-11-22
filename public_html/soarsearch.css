@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  background-repeat: no-repeat;
+	background-size: cover;
+}
+p {
+  text-align: center;
+  color: black;
+}
+h1 {
+  text-align: center;
+  color: #950442;
+  padding-bottom: 1%;
+}
+h2 {
+  text-align: center;
+  color: #950442;
+  padding-bottom: 1%;
+}
+#spacing {
+  padding-bottom: 2%;
+}
+#search {
+  padding-top: 1%;
+  width: 40%;
+  margin: auto;
+  background: #D7D1E9;
+}
