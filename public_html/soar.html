@@ -26,7 +26,6 @@
   <div id="surveyinfo">
 
     <form id="surveyform">
-    <!-- Delete system32 to continue this fucking dumb shit -->
 
     <div id="basicinfo">
       <h1>Welcome To SOAR</h1>
@@ -34,13 +33,18 @@
 
       <table border="0" width="100%">
         <tr>
-          <td>Your Name:</td>
-          <td><input type="text" id="nametextbox" placeholder="John Doe" /></td>
+          <td>First Name:</td>
+          <td><input type="text" id="first_name" placeholder="John Doe" /></td>
+        </tr>
+          
+        <tr>
+          <td>Last Name:</td>
+          <td><input type="text" id="last_name" placeholder="John Doe" /></td>
         </tr>
 
         <tr>
           <td>Z Number:</td>
-          <td><input type="text" id="znumbertextbox" maxlength="8" placeholder="00000000" /></td>
+          <td><input type="text" id="student_id" maxlength="8" placeholder="00000000" /></td>
         </tr>
 
         <tr>
@@ -102,7 +106,7 @@
 
         <tr>
           <td>School:</td>
-          <td><input type="text" id="schoolname" placeholder="Florida Atlantic University" /></td>
+          <td><input type="text" id="school_name" placeholder="Florida Atlantic University" /></td>
         </tr>
 
       </table>
@@ -169,22 +173,22 @@
 
         <tr>
           <td>Company Name:</td>
-          <td><input type="text" id="companyname" placeholder="CompanyName" /></td>
+          <td><input type="text" id="company_name" placeholder="CompanyName" /></td>
         </tr>
 
         <tr>
           <td>Position:</td>
-          <td><input type="text" id="position" placeholder="Position" /></td>
+          <td><input type="text" id="job_position_name" placeholder="Position" /></td>
         </tr>
 
         <tr>
           <td>Start Date:</td>
-          <td><input type="date" id="startdate" placeholder="mm/dd/yyyy" /></td>
+          <td><input type="date" id="start_date" placeholder="mm/dd/yyyy" /></td>
         </tr>
 
         <tr>
           <td>End Date:</td>
-          <td><input type="date" id="enddate" placeholder="mm/dd/yyyy"  /></td>
+          <td><input type="date" id="end_date" placeholder="mm/dd/yyyy"  /></td>
         </tr>
 
       </table>
@@ -197,12 +201,12 @@
     <div id="additionalinfo">
       <h2>Additional Information</h2>
       <p>Type a quick introduction about yourself!</p>
-      <p><textarea rows="10" cols="75" id="quickintro" placeholder="Quick Introduction..."></textarea></p>
+      <p><textarea rows="10" cols="75" id="summary_text" placeholder="Quick Introduction..."></textarea></p>
 
       <br />
 
       <p>Use this area to type any additional information that you may think is relevant, including awards or extra-curricular activities!</p>
-      <p><textarea rows="10" cols="75" id="relevantinfo" placeholder="Additional Info..."></textarea></p>
+      <p><textarea rows="10" cols="75" id="additional_text" placeholder="Additional Info..."></textarea></p>
 
       <hr width="35%" />
       <p><button href="#" id="done">Submit Resume!</button></p>
