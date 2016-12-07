@@ -65,7 +65,6 @@ li{
     <h1>Google Profile Details </h1>
     <?php
     echo '<div class="welcome_txt">Welcome <b>'.$_SESSION['google_data']['given_name'].'</b></div>';
-    echo '<div class="welcome_txt">Welcome <b>'.$_SESSION['given_name'].'</b></div>';
      echo '<div class="google_box">';
      echo '<p class="image"><img src="'.$_SESSION['google_data']['picture'].'" alt="" width="300" height="220"/></p>';
      echo '<p><b>Google ID : </b>' . $_SESSION['google_data']['id'].'</p>';
