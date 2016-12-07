@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <title>
 SOAR - A resume builder
 </title>
