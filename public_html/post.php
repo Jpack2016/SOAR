@@ -63,8 +63,42 @@ if(isset($_POST['first_name']))
   $skill_name = sanitizeString($db, $_POST['skill_name']);
   $proficiency_name = sanitizeString($db, $_POST['proficiency_name']);
 
-  echo $login, $_first_name, $_last_name, $_student_id, $_email, $_open_id, $_address1, $_address2, $_address3, $_city, $_state_code, $_zip, $_country, $_phone1, $_phone2, $_summary_text, $_additional_text,
-  $_school_name, $_degree_type_name, $_study_area, $_graduation_month, $_graduation_year, $_job_position_name, $_company_name, $_start_date, $_end_date, $_skill_name, $_proficiency_name;
+  echo $login, $first_name, $last_name, $student_id, $email, $open_id, $address1, $address2, $address3, $city, $state_code, $zip, $country, $phone1, $phone2, $summary_text, $additional_text,
+  $school_name, $degree_type_name, $study_area, $graduation_month, $graduation_year, $job_position_name, $company_name, $start_date, $end_date, $skill_name, $proficiency_name;
+
+  SaveStudentsToDB($db, $login, $firstname, $last_name, $student_id, $email , $open_id);
+  SaveStudentInfoToDB($db, $studentid, $address1, $address2, $address3, $city, $state_code, $zip, $country, $phone1, $phone2);
+  SaveStudentSummaryToDB($db, $student_id, $summary_text);
+  SaveStudentAdditionalToDB($db, $student_id, $additional_text);
+  SaveStudentEducationToDB($db, $student_id, $school_name, $degree_name, $study_area, $graduation_month, $graduation_year);
+  SaveStudentExperienceToDB($db, $student_id, $job_position_name, $company_name, $start_date, $end_date);
+  SaveStudentSkillsToDB($db, $student_id, $skill_name, $proficiency_name);
+
+  $proficiency_query = mysqli_query($db, "SELECT * FROM ref_proficiency WHERE proficiency_name='".$proficiency_name."'");
+  if(!mysqli_num_rows($proficiency_query) > 0)
+    SaveRefProficiencyToDB($db, $proficiency_name);
+  }
+
+  $skill_query = mysqli_query($db, "SELECT * FROM ref_skills WHERE skill_name='".$skill_name."'");
+  if(!mysqli_num_rows($skill_query) > 0)
+      SaveRefSkillsToDB($db, $skill_name);
+  }
+
+  $study_area_query = mysqli_query($db, "SELECT * FROM ref_study_area WHERE study_area='".$study_area."'");
+  if(!mysqli_num_rows($study_area_query) > 0)
+    SaveRefStudyAreaToDB($db, $study_area);
+  }
+
+  $position_query = mysqli_query($db, "SELECT * FROM ref_job_position WHERE position_name='".$position_name."'");
+  if(!mysqli_num_rows($position_query) > 0)
+    SaveRefJobPositionToDB($db, $position_name);
+  }
+
+  $degree_query = mysqli_query($db, "SELECT * FROM ref_degree WHERE degree_name='".$degree_name."'");
+  if(!mysqli_num_rows($degree_query) > 0)
+    SaveRefDegreeToDB($db, $degree_name);
+  }
+
 }
 
 ?>
