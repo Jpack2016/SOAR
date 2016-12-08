@@ -24,7 +24,7 @@
 }
 
 img {
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 4px;
   padding: 5px;
   margin:auto;
@@ -33,6 +33,7 @@ img {
 form {
   margin:auto;
   width:40%;
+  border-radius: 3px;
 
 }
 
@@ -44,16 +45,18 @@ form {
   width:40%;
   color:#B60215
 }
-.button {
+
+input[type=button], input[type=submit], input[type=reset] {
     background-color: #00426B; /* FAU Blue */
     border: none;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
+    padding: 16px 32px;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
 }
+
 </style>
 <body >
 <div id="grad1">
@@ -69,7 +72,7 @@ form {
       <input type="submit" class='button' value="Login">&nbsp;&nbsp;
       <a href='resetPassword.php'>Forgot your password?</a>
       <br><br>
-      <a href='signup.php'>Click here to sign up</a>
+      <button href='signup.php' value='Click here to sign up'>
 
   </form>
 </div>
