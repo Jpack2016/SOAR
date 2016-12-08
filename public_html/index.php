@@ -6,10 +6,10 @@ require_once dirname(__FILE__).'/GoogleClientApi/contrib/Google_AnalyticsService
 $scriptUri = "http://".$_SERVER["HTTP_HOST"].$_SERVER['PHP_SELF'];
 
 $client = new Google_Client();
-$client->setAccessType('online'); // default: offline
-$client->setApplicationName('My Application name');
-$client->setClientId('INSERT HERE');
-$client->setClientSecret('INSERT HERE');
+$client->setAccessType('offline'); // default: offline
+$client->setApplicationName('fau-soar');
+$client->setClientId('164072217971-qov1vkar7dokud07fgl6ph83cuno7v7r.apps.googleusercontent.com');
+$client->setClientSecret('vgkp6cULlai3Qbc0Wny4dmR5');
 $client->setRedirectUri($scriptUri);
 $client->setDeveloperKey('INSERT HERE'); // API key
 
