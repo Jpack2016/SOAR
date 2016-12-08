@@ -8,6 +8,7 @@
 <head>
 <style>
 #grad1 {
+    align-self: center;
     background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left top, #062C5E, #558BD1); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom right, #062C5E, #558BD1); /* For Opera 11.1 to 12.0 */
@@ -26,16 +27,20 @@ img {
   border-radius: 4px;
   padding: 5px;
 }
+form {
+  margin:auto;
+  width:40%;
+}
 </style>
 <body >
 <div id="grad1">
 <div id="loginbox">
 
-<img src="logo.png" alt="Logo">
+<img src="logo.png" alt="Logo"><br>
 <a class="welcome">Welcome to SOAR</a>
-  <form>
+  <form >
       User name:
-      <input type="text" name="userId"><br>
+      <input type="text" name="userId"><br><br>
       Password:
       <input type="password" name="userPass"><br>
       <input type="submit" class='button' value="Login">&nbsp;&nbsp;
