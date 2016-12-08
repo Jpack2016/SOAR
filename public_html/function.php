@@ -1,5 +1,22 @@
 <?php
 
+function __construct(){
+  //database configuration
+  $dbServer = 'localhost'; //Define database server host
+  $dbUsername = 'fsoare2014'; //Define database username
+  $dbPassword = 'YD493oOEd3'; //Define database password
+  $dbName = 'fsoares2014'; //Define database name
+
+  //connect databse
+  $_db = mysqli_connect($dbServer,$dbUsername,$dbPassword,$dbName);
+  if(mysqli_connect_errno()){
+    die("Failed to connect with MySQL: ".mysqli_connect_error());
+  }else{
+    $this->connect = $_db;
+  }
+}
+
+
 function sanitizeString($_db, $str)
 {
     $str = strip_tags($str);
@@ -8,16 +25,16 @@ function sanitizeString($_db, $str)
     return mysqli_real_escape_string($_db, $str);
 }
 
-function SaveStudentsToDB($_db, $_login, $_first_name, $_last_name, $_student_id, $_email , $_open_id)
+function SaveStudentsToDB($_db, $_login, $_first_name, $_last_name, $_student_id, $_email , $_password)
 {
   /* Prepared statement, stage 1: prepare query */
-  if (!($stmt = $_db->prepare("INSERT INTO students(login, first_name, last_name, student_id, email, openid) VALUES (?, ?, ?, ?, ?, ?)")))
+  if (!($stmt = $_db->prepare("INSERT INTO students(login, first_name, last_name, student_id, email, password) VALUES (?, ?, ?, ?, ?, ?)")))
   {
     echo "Prepare failed: (" . $_db->errno . ") " . $_db->error;
   }
 
   /* Prepared statement, stage 2: bind parameters*/
-  if (!$stmt->bind_param('ssssss', $_login, $_first_name, $_last_name, $_student_id, $_email , $_open_id))
+  if (!$stmt->bind_param('ssssss', $_login, $_first_name, $_last_name, $_student_id, $_email , $_password))
   {
     echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
@@ -258,6 +275,63 @@ function SaveRefDegreeToDB($_db, $_degree_name)
 	{
 		echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 	}
+}
+
+function signup() {
+  require_once 'php/db_connect.php';
+  $salt1 = "qm&h*";
+  $salt2 = "pg!@";
+
+  $username = $_POST['usernameNew'];
+  $password = $_POST['passwordNew'];
+  $token = hash('ripemd128', "$salt1$password$salt2");
+  $query  = "INSERT INTO users VALUES('$username', '$token', '0')";
+  $result = $db->query($query);
+  if (!$result)
+  {
+    echo "<h3> Username Taken! </h3>";
+  }else{
+    echo "<h3> Signup Successful </h3>";
+    session_start();
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
+  }
+  }
+  if($_SESSION['username'] != '') {
+    header("Location: wall.php");
+    exit();
+  }
+
+function login() {
+    require_once 'php/db_connect.php';
+    $salt1 = "qm&h*";
+    $salt2 = "pg!@";
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $query  = "SELECT * FROM users WHERE username='$username'";
+    $result = $db->query($query);
+    if ($result->num_rows)
+    {
+        $row = $result->fetch_array(MYSQLI_NUM);
+        $result->close();
+
+        $salt1 = "qm&h*";
+        $salt2 = "pg!@";
+        $token = hash('ripemd128', "$salt1$password$salt2");
+
+        if ($token == $row[1])
+        {
+          echo "success";
+          session_start();
+          $_SESSION['username'] = $username;
+          $_SESSION['password'] = $password;
+          echo "<h3> Login Successful";
+        }
+        else echo "<h3> Invalid Username/Password </h3>";
+    }
+    else echo "<h3> Invalid Username/Password </h3>";
 }
 
 ?>
