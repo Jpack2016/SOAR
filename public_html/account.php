@@ -1,6 +1,7 @@
 <?php
-session_start();
-if(!isset($_SESSION['google_data'])):header("Location:index.php");endif;
+//session_start();
+echo 'Session_id'.session_id();
+//if(!isset($_SESSION['google_data'])):header("Location:index.php");endif;
 ?>
 <html>
 <head>

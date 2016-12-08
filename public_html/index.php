@@ -1,35 +1,50 @@
 <?php
-include_once("config.php");
-include_once("includes/functions.php");
 
-//print_r($_GET);die;
 
-if(isset($_REQUEST['code'])){
-	$gClient->authenticate();
-	$_SESSION['token'] = $gClient->getAccessToken();
-	header('Location: ' . filter_var($redirectUrl, FILTER_SANITIZE_URL));
+ ?>
+
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad1 {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #062C5E, #558BD1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #062C5E, #558BD1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #062C5E, #558BD1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #062C5E, #558BD1); /* Standard syntax (must be last) */
 }
 
-if (isset($_SESSION['token'])) {
-	$gClient->setAccessToken($_SESSION['token']);
+#loginbox {
+    height = 250px;
+    width = 500px;
+    align-self: center;
 }
 
-if ($gClient->getAccessToken()) {
-	$userProfile = $google_oauthV2->userinfo->get();
-	//DB Insert
-	$gUser = new Users();
-	$gUser->checkUser('google',$userProfile['id'],$userProfile['given_name'],$userProfile['family_name'],$userProfile['email'],$userProfile['gender'],$userProfile['locale'],$userProfile['link'],$userProfile['picture']);
-	$_SESSION['google_data'] = $userProfile; // Storing Google User Data in Session
-	header("location: account.php");
-	$_SESSION['token'] = $gClient->getAccessToken();
-} else {
-	$authUrl = $gClient->createAuthUrl();
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
 }
+</style>
+<body >
+<div id="grad1">
+<div id="loginbox">
 
-if(isset($authUrl)) {
-	echo '<a href="'.$authUrl.'"><img src="images/glogin.png" alt=""/></a>';
-} else {
-	echo '<a href="logout.php?logout">Logout</a>';
-}
+<img src="logo.png" alt="Logo">
+<a class="welcome">Welcome to SOAR</a>
+  <form>
+      User name:
+      <input type="text" name="userId"><br>
+      Password:
+      <input type="password" name="userPass"><br>
+      <input type="submit" class='button' value="Login">&nbsp;&nbsp;
+      <a href='resetPassword.php'>Forgot your password?</a>
+      <br><br>
+      <a href='signup.php'>Click here to sign up</a>
 
-?>
+  </form>
+</div>
+</div>
+</body>
+</html>
