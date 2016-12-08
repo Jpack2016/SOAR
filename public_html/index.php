@@ -24,6 +24,7 @@
 }
 
 img {
+  display:block;
   border: none;
   border-radius: 4px;
   padding: 5px;
@@ -38,6 +39,7 @@ form {
 }
 
 #welcome {
+  display:block;
   font-weight: bold;
   font-size: 2.5em;
   font-family: "Verdana", Verdana, sans-serif;
@@ -65,9 +67,9 @@ input[type=button], input[type=submit], input[type=reset] {
 <img src="images/logo.png" alt="Logo"><br>
 <a id="welcome">Welcome to SOAR</a>
   <form >
-      <a color:white>User name:</a>
+      <a color="white">User name:</a>
       <input type="text" name="userId"><br><br>
-      <a color:white>Password:&nbsp;&nbsp;</a>
+      <a color="white">Password:&nbsp;&nbsp;</a>
       <input type="password" name="userPass"><br>
       <input type="submit" class='button' value="Login">&nbsp;&nbsp;
       <a href='resetPassword.php'>Forgot your password?</a>
