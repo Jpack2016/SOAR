@@ -6,9 +6,7 @@ SOAR - A resume builder
 <style>
 .button {
 border-radius: 4px;
-background-color: #f4511e;
 border: none;
-color: #FFFFFF;
 font-size: 28px;
 padding: 20px;
 width: 200px;
@@ -50,10 +48,21 @@ li{
         display: inline-block;
         margin: 2%;
     }
+
+#welcome {
+  display:block;
+  font-weight: bold;
+  font-size: 2.5em;
+  font-family: "Verdana", Verdana, sans-serif;
+  margin:auto;
+  width:50%;
+  color:#B60215;
+  text-align:center;
+}
 </style>
 </head>
 <body>
-<h1 style="text-align:center; font-size:55px;">Welcome to SOAR </h1>
+<h1 style="text-align:center; font-size:55px;" id="welcome">Welcome to SOAR </h1>
 
 <ul class="stylez">
     <li><button class="button"><span>Create Resume </span></button></li>
