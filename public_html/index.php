@@ -7,7 +7,7 @@
 <html>
 <head>
 <style>
-#grad1 {
+body {
     height:100%;
     align-self: center;
     background: #558BD1; /* For browsers that do not support gradients */
@@ -80,7 +80,7 @@ input[type=text], input[type=password] {
 }
 
 </style>
-<body id="grad1">
+<body>
 <div id="loginbox">
 <img src="images/logo.png" alt="Logo"><br>
 <a id="welcome">Welcome to SOAR<br>
