@@ -1,18 +1,35 @@
 <?php
-require_once __DIR__.'/autoload.php';
+include_once("config.php");
+include_once("includes/functions.php");
 
-session_start();
+//print_r($_GET);die;
 
-$client = new Google_Client();
-$client->setAuthConfig('client_secrets.json');
-$client->addScope(Google_Service_Drive::DRIVE_METADATA_READONLY);
-
-if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
-  $client->setAccessToken($_SESSION['access_token']);
-  $drive_service = new Google_Service_Drive($client);
-  $files_list = $drive_service->files->listFiles(array())->getItems();
-  echo json_encode($files_list);
-} else {
-  $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php';
-  header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
+if(isset($_REQUEST['code'])){
+	$gClient->authenticate();
+	$_SESSION['token'] = $gClient->getAccessToken();
+	header('Location: ' . filter_var($redirectUrl, FILTER_SANITIZE_URL));
 }
+
+if (isset($_SESSION['token'])) {
+	$gClient->setAccessToken($_SESSION['token']);
+}
+
+if ($gClient->getAccessToken()) {
+	$userProfile = $google_oauthV2->userinfo->get();
+	//DB Insert
+	$gUser = new Users();
+	$gUser->checkUser('google',$userProfile['id'],$userProfile['given_name'],$userProfile['family_name'],$userProfile['email'],$userProfile['gender'],$userProfile['locale'],$userProfile['link'],$userProfile['picture']);
+	$_SESSION['google_data'] = $userProfile; // Storing Google User Data in Session
+	header("location: account.php");
+	$_SESSION['token'] = $gClient->getAccessToken();
+} else {
+	$authUrl = $gClient->createAuthUrl();
+}
+
+if(isset($authUrl)) {
+	echo '<a href="'.$authUrl.'"><img src="images/glogin.png" alt=""/></a>';
+} else {
+	echo '<a href="logout.php?logout">Logout</a>';
+}
+
+?>
