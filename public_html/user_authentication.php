@@ -9,7 +9,7 @@ require_once 'Google/Service/Oauth2.php';
 // Fill CLIENT ID, CLIENT SECRET ID, REDIRECT URI from Google Developer Console
  $client_id = '164072217971-qov1vkar7dokud07fgl6ph83cuno7v7r.apps.googleusercontent.com';
  $client_secret = 'vgkp6cULlai3Qbc0Wny4dmR5';
- $redirect_uri = 'main_menu.php;
+ $redirect_uri = 'main_menu.php';
  $simple_api_key = 'AIzaSyCd7A7tXn_rpNCBFf3E2JUF71p4FwNysLQ';
 
 //Create Client Request to access Google API
