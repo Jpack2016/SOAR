@@ -5,6 +5,10 @@ SOAR - A resume builder
 <link rel="stylesheet" type="text/css" href="main.css">
 <style>
 .button {
+background-color: #00426B; /* FAU Blue */
+border: none;
+border-radius:4px;
+color: white;
 border-radius: 4px;
 border: none;
 font-size: 28px;
@@ -16,6 +20,10 @@ margin: 5px;
 }
 
 .button span {
+background-color: #00426B; /* FAU Blue */
+border: none;
+border-radius:4px;
+color: white;
 cursor: pointer;
 display: inline-block;
 position: relative;
@@ -23,6 +31,10 @@ transition: 0.5s;
 }
 
 .button span:after {
+background-color: #00426B; /* FAU Blue */
+border: none;
+border-radius:4px;
+color: white;
 content: '»';
 position: absolute;
 opacity: 0;
