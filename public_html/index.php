@@ -22,6 +22,12 @@
     width = 500px;
     align-self: center;
 }
+a {
+  color:#000000;
+  font-family: "Verdana", Verdana, sans-serif;
+  size:100%;
+
+}
 
 img {
   display:block;
@@ -74,7 +80,7 @@ input[type=button], input[type=submit], input[type=reset] {
       <input type="submit" class='button' value="Login">&nbsp;&nbsp;
       <a href='resetPassword.php'>Forgot your password?</a>
       <br><br>
-      <button href='signup.php' value='Click here to sign up'>
+      <input type='button' href='signup.php' value='Click here to sign up'>
 
   </form>
 </div>
