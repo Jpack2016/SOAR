@@ -37,7 +37,7 @@ img {
   border-radius: 4px;
   padding: 5px;
   margin:auto;
-  width:40%;
+  width:400px;
 }
 form {
   margin:auto;
