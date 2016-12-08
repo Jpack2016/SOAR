@@ -1,35 +1,39 @@
 <?php
-include_once("config.php");
-include_once("includes/functions.php");
+session_start();
+require_once dirname(__FILE__).'/GoogleClientApi/Google_Client.php';
+require_once dirname(__FILE__).'/GoogleClientApi/contrib/Google_AnalyticsService.php';
 
-//print_r($_GET);die;
+$scriptUri = "http://".$_SERVER["HTTP_HOST"].$_SERVER['PHP_SELF'];
 
-if(isset($_REQUEST['code'])){
-	$gClient->authenticate();
-	$_SESSION['token'] = $gClient->getAccessToken();
-	header('Location: ' . filter_var($redirectUrl, FILTER_SANITIZE_URL));
+$client = new Google_Client();
+$client->setAccessType('online'); // default: offline
+$client->setApplicationName('My Application name');
+$client->setClientId('INSERT HERE');
+$client->setClientSecret('INSERT HERE');
+$client->setRedirectUri($scriptUri);
+$client->setDeveloperKey('INSERT HERE'); // API key
+
+// $service implements the client interface, has to be set before auth call
+$service = new Google_AnalyticsService($client);
+
+if (isset($_GET['logout'])) { // logout: destroy token
+    unset($_SESSION['token']);
+	die('Logged out.');
 }
 
-if (isset($_SESSION['token'])) {
-	$gClient->setAccessToken($_SESSION['token']);
+if (isset($_GET['code'])) { // we received the positive auth callback, get the token and store it in session
+    $client->authenticate();
+    $_SESSION['token'] = $client->getAccessToken();
 }
 
-if ($gClient->getAccessToken()) {
-	$userProfile = $google_oauthV2->userinfo->get();
-	//DB Insert
-	$gUser = new Users();
-	$gUser->checkUser('google',$userProfile['id'],$userProfile['given_name'],$userProfile['family_name'],$userProfile['email'],$userProfile['gender'],$userProfile['locale'],$userProfile['link'],$userProfile['picture']);
-	$_SESSION['google_data'] = $userProfile; // Storing Google User Data in Session
-	header("location: account.php");
-	$_SESSION['token'] = $gClient->getAccessToken();
-} else {
-	$authUrl = $gClient->createAuthUrl();
+if (isset($_SESSION['token'])) { // extract token from session and configure client
+    $token = $_SESSION['token'];
+    $client->setAccessToken($token);
 }
 
-if(isset($authUrl)) {
-	echo '<a href="'.$authUrl.'"><img src="images/glogin.png" alt=""/></a>';
-} else {
-	echo '<a href="logout.php?logout">Logout</a>';
+if (!$client->getAccessToken()) { // auth call to google
+    $authUrl = $client->createAuthUrl();
+    header("Location: ".$authUrl);
+    die;
 }
-
-?>
+echo 'Hello, world.';
