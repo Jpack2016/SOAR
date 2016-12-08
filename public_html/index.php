@@ -66,6 +66,7 @@ input[type=button], input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
     text-align: center;
+    width:200px;
 }
 
 input[type=text], input[type=password] {
@@ -79,7 +80,7 @@ input[type=text], input[type=password] {
 <div id="loginbox">
 <img src="images/logo.png" alt="Logo"><br>
 <a id="welcome">Welcome to SOAR<br>
-A Resume Builder</a><br><br> 
+A Resume Builder</a><br><br>
 
   <form action='main_menu.php'>
       <a>Username:</a>&nbsp;
