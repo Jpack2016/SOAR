@@ -8,21 +8,18 @@
 <head>
 <style>
 #grad1 {
+    height:100%;
     align-self: center;
-    height: 100%;
-    background: red; /* For browsers that do not support gradients */
+    background: #558BD1; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left top, #062C5E, #558BD1); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom right, #062C5E, #558BD1); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom right, #062C5E, #558BD1); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #062C5E, #558BD1); /* Standard syntax (must be last) */
 }
-#logobox {
 
-}
 #loginbox {
-    height = 250px;
-    width = 500px;
     align-self: center;
+    height:100%;
 }
 a {
   color:white;
@@ -39,9 +36,12 @@ img {
   margin:auto;
   width:400px;
 }
+
 form {
   margin:auto;
   border-radius: 3px;
+  width=50%;
+  align-self:center
 
 }
 
@@ -51,12 +51,15 @@ form {
   font-size: 2.5em;
   font-family: "Verdana", Verdana, sans-serif;
   margin:auto;
-  color:#B60215
+  width:50%;
+  color:#B60215;
+  text-align:center;
 }
 
 input[type=button], input[type=submit], input[type=reset] {
     background-color: #00426B; /* FAU Blue */
     border: none;
+    border-radius:4px;
     color: white;
     padding: 16px 32px;
     text-decoration: none;
@@ -65,26 +68,31 @@ input[type=button], input[type=submit], input[type=reset] {
     text-align: center;
 }
 
+input[type=text], input[type=password] {
+    border:thin;
+    border-color:#B60215;
+    border-radius:4px;
+}
+
 </style>
-<body >
-<div id="grad1">
+<body id="grad1">
 <div id="loginbox">
-<div>
-<img margin='auto' src="images/logo.png" alt="Logo"><br>
-<a margin='auto' id="welcome">Welcome to SOAR</a><br><br>
-</div>
-  <form >
-      <a>User name:</a>
+<img src="images/logo.png" alt="Logo"><br>
+<a id="welcome">Welcome to SOAR<br>
+A Resume Builder</a><br><br> 
+
+  <form action='main_menu.php'>
+      <a>Username:</a>&nbsp;
       <input type="text" name="userId"><br><br>
       <a>Password:&nbsp;&nbsp;</a>
       <input type="password" name="userPass"><br><br><br>
-      <input type="submit" class='button' value="Login">&nbsp;&nbsp;
+      <input type="submit" value="Login">&nbsp;&nbsp;
       <a href='resetPassword.php'>Forgot your password?</a>
       <br><br>
-      <input type='button' href='signup.php' value='Click here to sign up'>
+  <form action='signup.php'>
+      <input type='submit'  value='Click here to sign up'>
 
   </form>
-</div>
 </div>
 </body>
 </html>
