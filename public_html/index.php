@@ -12,7 +12,7 @@
 #loginbox {
     height:100%;
     margin:auto;
-    width:50%;
+    width:auto;
     display:block;
     padding:50px;
     padding-bottom:350px;
@@ -24,7 +24,7 @@
   font-size: 2.5em;
   font-family: "Verdana", Verdana, sans-serif;
   margin:auto;
-  width:50%;
+  width:auto;
   color:#B60215;
   text-align:center;
 }
