@@ -36,12 +36,12 @@
 <a id="welcome">Welcome to SOAR<br>
 A Resume Builder</a><br><br>
 <center>
-  <form action='userauth.php'>
+  <form action='main_menu.php'>
       <a>Username:</a>&nbsp;
       <input type="text" name="userId"><br><br>
       <a>Password:&nbsp;&nbsp;</a>
       <input type="password" name="userPass"><br><br><br>
-      <input type="submit" value="Login">&nbsp;&nbsp;
+      <input type="submit" value="Login">
       <br><br>
   </form>
   <form action='signup.php'>
