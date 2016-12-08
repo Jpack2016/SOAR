@@ -23,7 +23,7 @@
     align-self: center;
 }
 a {
-  color:#000000;
+  color:white;
   font-family: "Verdana", Verdana, sans-serif;
   size:100%;
 
@@ -71,11 +71,11 @@ input[type=button], input[type=submit], input[type=reset] {
 <div id="loginbox">
 
 <img src="images/logo.png" alt="Logo"><br>
-<a id="welcome">Welcome to SOAR</a>
+<a id="welcome">Welcome to SOAR</a><br><br>
   <form >
-      <a color="white">User name:</a>
+      <a>User name:</a>
       <input type="text" name="userId"><br><br>
-      <a color="white">Password:&nbsp;&nbsp;</a>
+      <a>Password:&nbsp;&nbsp;</a>
       <input type="password" name="userPass"><br>
       <input type="submit" class='button' value="Login">&nbsp;&nbsp;
       <a href='resetPassword.php'>Forgot your password?</a>
