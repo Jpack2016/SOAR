@@ -2,7 +2,7 @@
 SOAR - A resume builder
 </title>
 <head>
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <style>
 .button {
 background-color: #00426B; /* FAU Blue */
