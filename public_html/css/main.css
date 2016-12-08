@@ -8,7 +8,7 @@ body {
 
 a {
   color:white;
-  font-family: "Verdana", Verdana, sans-serif;
+
   size:100%;
 
 }
@@ -39,6 +39,7 @@ input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
     text-align: center;
     width:200px;
+    border-color: #690601;
 }
 
 input[type=text], input[type=password] {
