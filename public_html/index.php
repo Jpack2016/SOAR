@@ -15,7 +15,6 @@
     width:auto;
     display:block;
     padding:50px;
-    padding-bottom:350px;
 }
 
 #welcome {
