@@ -41,7 +41,6 @@ img {
 }
 form {
   margin:auto;
-  width:40%;
   border-radius: 3px;
 
 }
@@ -52,7 +51,6 @@ form {
   font-size: 2.5em;
   font-family: "Verdana", Verdana, sans-serif;
   margin:auto;
-  width:40%;
   color:#B60215
 }
 
