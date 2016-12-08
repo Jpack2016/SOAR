@@ -61,22 +61,20 @@ li{
 </ul>
 
 
-<div class="wrapper">
-    <h1>Google Profile Details </h1>
-    <?php
-    echo '<div class="welcome_txt">Welcome <b>'.$_SESSION['google_data']['given_name'].'</b></div>';
-    echo '<div class="welcome_txt">Welcome <b>'.$_SESSION['given_name'].'</b></div>';
-     echo '<div class="google_box">';
-     echo '<p class="image"><img src="'.$_SESSION['google_data']['picture'].'" alt="" width="300" height="220"/></p>';
-     echo '<p><b>Google ID : </b>' . $_SESSION['google_data']['id'].'</p>';
-     echo '<p><b>Name : </b>' . $_SESSION['google_data']['name'].'</p>';
-     echo '<p><b>Email : </b>' . $_SESSION['google_data']['email'].'</p>';
-     echo '<p><b>Gender : </b>' . $_SESSION['google_data']['gender'].'</p>';
-     echo '<p><b>Locale : </b>' . $_SESSION['google_data']['locale'].'</p>';
-     echo '<p><b>Google+ Link : </b>' . $_SESSION['google_data']['link'].'</p>';
-     echo '<p><b>You are login with : </b>Google</p>';
-     echo '<p><b>Logout from <a href="logout.php?logout">Google</a></b></p>';
-     echo '</div>';
-    ?>
+<div class="heading">PHP Google OAuth 2.0 Login</div>
+<div class="box">
+  <div>
+	<!-- Show Login if the OAuth Request URL is set -->
+    <?php if (isset($authUrl)): ?>
+	  <img src="images/user.png" width="100px" size="100px" /><br/>
+      <a class='login' href='<?php echo $authUrl; ?>'><img class='login' src="images/sign-in-with-google.png" width="250px" size="54px" /></a>
+	<!-- Show User Profile otherwise-->
+    <?php else: ?>
+	  <img class="circle-image" src="<?php echo $userData["picture"]; ?>" width="100px" size="100px" /><br/>
+	  <p class="welcome">Welcome <a href="<?php echo $userData["link"]; ?>" /><?php echo $userData["name"]; ?></a>.</p>
+	  <p class="oauthemail"><?php echo $userData["email"]; ?></p>
+	  <div class='logout'><a href='?logout'>Logout</a></div>
+    <?php endif ?>
+  </div>
 </div>
 </body>
