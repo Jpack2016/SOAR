@@ -57,7 +57,7 @@ if (isset($_POST['debug']) && ($_POST['debug']=='show'))    $TBS->Plugin(OPENTBS
 // --------------------------------------------
 
 // Merge data in the body of the document
-$TBS->MergeBlock('a,b', $data);
+$TBS->MergeBlock('d', $data);
 
 // Change chart series
 $ChartNameOrNum = 'a nice chart'; // Title of the shape that embeds the chart
