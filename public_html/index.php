@@ -18,8 +18,14 @@
 }
 
 #loginbox {
-    align-self: center;
     height:100%;
+    margin:auto;
+    width:50%;
+    display:block;
+    padding:50px;
+    padding-bottom:350px;
+    
+
 }
 a {
   color:white;
@@ -40,8 +46,6 @@ img {
 form {
   margin:auto;
   border-radius: 3px;
-  width=50%;
-  align-self:center
 
 }
 
@@ -80,20 +84,22 @@ input[type=text], input[type=password] {
 <div id="loginbox">
 <img src="images/logo.png" alt="Logo"><br>
 <a id="welcome">Welcome to SOAR<br>
-A Resume Builder</a><br><br>
-
+A Resume Builder</a><br><br> 
+<center>
   <form action='main_menu.php'>
       <a>Username:</a>&nbsp;
       <input type="text" name="userId"><br><br>
       <a>Password:&nbsp;&nbsp;</a>
       <input type="password" name="userPass"><br><br><br>
       <input type="submit" value="Login">&nbsp;&nbsp;
-      <a href='resetPassword.php'>Forgot your password?</a>
       <br><br>
+  </form>
   <form action='signup.php'>
       <input type='submit'  value='Click here to sign up'>
 
   </form>
+  <a href='resetPassword.php'>Forgot your password?</a>
+</center>
 </div>
 </body>
 </html>
