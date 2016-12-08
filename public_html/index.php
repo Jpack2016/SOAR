@@ -16,7 +16,9 @@
     background: -moz-linear-gradient(bottom right, #062C5E, #558BD1); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #062C5E, #558BD1); /* Standard syntax (must be last) */
 }
+#logobox {
 
+}
 #loginbox {
     height = 250px;
     width = 500px;
@@ -69,14 +71,15 @@ input[type=button], input[type=submit], input[type=reset] {
 <body >
 <div id="grad1">
 <div id="loginbox">
-
-<img src="images/logo.png" alt="Logo"><br>
-<a id="welcome">Welcome to SOAR</a><br><br>
+<div>
+<img margin='auto' src="images/logo.png" alt="Logo"><br>
+<a margin='auto' id="welcome">Welcome to SOAR</a><br><br>
+</div>
   <form >
       <a>User name:</a>
       <input type="text" name="userId"><br><br>
       <a>Password:&nbsp;&nbsp;</a>
-      <input type="password" name="userPass"><br>
+      <input type="password" name="userPass"><br><br><br>
       <input type="submit" class='button' value="Login">&nbsp;&nbsp;
       <a href='resetPassword.php'>Forgot your password?</a>
       <br><br>
