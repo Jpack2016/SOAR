@@ -34,9 +34,6 @@ $city = "Boca";
 $state = "FL";
 $zip = "33431";
 
-$data = array("education"=>array('inst'=>'FAU','major'=>'CE','start_date'=>'12/01/14','end_date'=>'06/01/17'),'skills'=>('C++','Intermediate'));
-
-
 // A recordset for merging tables
 $data = array();
 $data['education'] = array();
