@@ -18,12 +18,11 @@ function reset($_reset_email)
   $message = "Here is your new password:\r\n$randomString\r\nLine 3";
   // Send
   mail($_reset_email, 'Password Reset', $message);
-
 }
-
+/*
 isset($_POST['email']) {
   reset($_POST['email']);
   header('Location:/email_sent.html');
-}
+}*/
 
 ?>
