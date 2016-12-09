@@ -1,5 +1,5 @@
 <?php
-include_once('function.php');
+require_once('function.php');
 ?>
 <!doctype html>
 <html>

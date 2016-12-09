@@ -1,5 +1,5 @@
 <?php
-include_once('reset.php');
+require_once('reset.php');
  ?>
 
  <!DOCTYPE html>
