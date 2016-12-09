@@ -1,5 +1,5 @@
 <?php
-function reset($_reset_email)
+reset($_reset_email)
 {
   $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   $charactersLength = strlen($characters);
