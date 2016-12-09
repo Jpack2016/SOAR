@@ -4,8 +4,11 @@
     if(isset($_POST['study']))
     {
       $query = $db->query("SELECT * FROM ref_study_area WHERE study_area LIKE '%".$q."%' ORDER BY study_area ASC");
-      $dropdown=array();
+      echo "query ".$query." $dropdown ".$dropdown;
 
+
+      $dropdown=array();
+      echo "query ".$query." $dropdown ".$dropdown;
       while($row = mysql_fetch_array($result)) {
         array_push($dropdown, $row['fname']);
       }
