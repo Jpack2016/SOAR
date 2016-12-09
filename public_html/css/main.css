@@ -6,7 +6,7 @@ body {
   background: linear-gradient(to bottom right, #062C5E, #558BD1); /* Standard syntax (must be last) */
 }
 
-a {
+a, p {
   color:white;
 
   size:100%;
