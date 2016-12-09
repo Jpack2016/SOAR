@@ -36,7 +36,7 @@ function SaveStudentsToDB($_db, $_first_name, $_last_name, $_student_id, $_email
     $_SESSION['firstname'] = $_first_name;
     $_SESSION['lastname'] = $_last_name;
     $_SESSION['studentid'] =  $_student_id;
-    header('Location: soar.html');
+    header('Location: soar.php');
   }
 }
 
