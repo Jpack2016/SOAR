@@ -16,8 +16,11 @@ function reset($_reset_email)
 
   // The message
   $message = "Here is your new password:\r\n$randomString\r\nLine 3";
+  $headers = 'From: soar@cse.fau.edu' . "\r\n" .
+    'Reply-To: noreply@cse.fau.edu' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
   // Send
-  mail($_reset_email, 'Password Reset', $message);
+  mail($_reset_email, 'Password Reset', $message, $headers);
 }
 
 if(isset($_POST['email'])) {
