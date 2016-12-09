@@ -2,7 +2,7 @@
 require_once('signup.php');
 ?>
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -28,9 +28,9 @@ require_once('signup.php');
 }
 </style>
 </head>
-<body>
+<body background="background.png">
 <div>
-<center>
+<center style="margin-top:100px">
   <a>Please enter your information:</a><br><br>
 
   <form action="signup_form.php" method="POST">
