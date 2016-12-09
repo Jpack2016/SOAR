@@ -1,5 +1,5 @@
 <?php
-include_once('signup.php');
+require_once('signup.php');
 ?>
 
  <!DOCTYPE html>
@@ -33,7 +33,7 @@ include_once('signup.php');
 <center>
   <a>Please enter your information:</a><br><br>
 
-  <form action="signup_form.php">
+  <form action="signup_form.php" method:"POST">
     <div class="divTable">
       <div class="divTR">
         <div class="divTD"><a>Email:</a></div>

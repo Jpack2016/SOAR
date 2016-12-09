@@ -1,11 +1,11 @@
 <?php
-
+echo "included";
 function signup() {
   require_once 'db_connect.php';
   require_once 'function.php';
   $salt1 = "qm&h*";
   $salt2 = "pg!@";
-
+echo "ran";
   $login = '';
   $_first_name = '';
   $_last_name = '';
@@ -26,6 +26,7 @@ function signup() {
 
 if(isset($_POST['email'])||isset($_POST['password'])||isset($_POST['student_id'])||isset($_POST['first_name'])||isset($_POST['last_name']))
 {
+  echo "posted";
   signup();
 }
 
