@@ -165,27 +165,28 @@ function SaveStudentSkillsToDB($_db, $_student_id, $_skill_name, $_proficiency_n
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
-
+/*
 function SaveRefProficiencyToDB($_db, $_proficiency_name)
 {
-  /* Prepared statement, stage 1: prepare query */
+   Prepared statement, stage 1: prepare query 
 	if (!($stmt = $_db->prepare("INSERT INTO ref_proficiency(proficiency_name) VALUES (?)")))
 	{
 		echo "Prepare failed: (" . $_db->errno . ") " . $_db->error;
 	}
 
-	/* Prepared statement, stage 2: bind parameters*/
+	 Prepared statement, stage 2: bind parameters
 	if (!$stmt->bind_param('s', $_proficiency_name))
 	{
 		echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 	}
 
-	/* Prepared statement, stage 3: execute*/
+	 Prepared statement, stage 3: execute
 	if (!$stmt->execute())
 	{
 		echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 	}
 }
+*/
 
 function SaveRefSkillsToDB($_db, $_skill_name)
 {

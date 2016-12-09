@@ -29,6 +29,7 @@
 }
 
 </style>
+</head>
 <body>
 <div id="loginbox">
 <img src="images/logo.png" alt="Logo"><br>
@@ -36,7 +37,7 @@
 A Resume Builder</a><br><br>
 <center>
   <form action='main_menu.php'>
-      <a>Username:</a>&nbsp;
+      <a>Email:</a>&nbsp;
       <input type="text" name="userId"><br><br>
       <a>Password:&nbsp;&nbsp;</a>
       <input type="password" name="userPass"><br><br><br>
