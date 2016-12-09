@@ -1,6 +1,5 @@
 <?php
-reset($_reset_email)
-{
+function resetpwd($_reset_email){
   $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   $charactersLength = strlen($characters);
   $randomString = '';
@@ -24,7 +23,7 @@ reset($_reset_email)
 }
 
 if(isset($_POST['email'])) {
-  reset($_POST['email']);
+  resetpwd($_POST['email']);
   header('Location:/email_sent.html');
 }
 
