@@ -2,10 +2,10 @@ $(function() {
   // SETUP
   var $newItemForm, $newItemButton;
   var item = '';                                 // item is an empty string
-  $basicinfo = $('#basicinfoform');              //div for basic info
-  $skills = $('#skillsform');          //div for skills
-  $workexperience = $('#workform');              //div for work experience
-  $addinfo = $('#addform');          //div for additionalinfo
+  $basicinfo = $('#basicinfo');              //div for basic info
+  $skills = $('#skills');          //div for skills
+  $workexperience = $('#workexperience');              //div for work experience
+  $addinfo = $('#additionalinfo');          //div for additionalinfo
 
   //degree tables
   $degreetable2 = $('#degreetable2');
