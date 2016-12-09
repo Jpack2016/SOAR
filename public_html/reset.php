@@ -19,10 +19,10 @@ function reset($_reset_email)
   // Send
   mail($_reset_email, 'Password Reset', $message);
 }
-/*
-isset($_POST['email']) {
+
+if(isset($_POST['email'])) {
   reset($_POST['email']);
   header('Location:/email_sent.html');
-}*/
+}
 
 ?>
