@@ -35,8 +35,8 @@ include_once('signup.php');
   <form action="signup_form.php">
     <div class="divTable">
       <div class="divTR">
-        <div class="divTD"><a>Email:</a>&nbsp;</div>
-        <div class="divTD"><input type="text" name="email"><br><br></div>
+        <div class="divTD"><a>Email:</a></div>
+        <div class="divTD"><input type="text" name="email"></div>
       </div>
       <div class="divTR">
         <div class="divTD"><a>Password:&nbsp;&nbsp;</a></div>
