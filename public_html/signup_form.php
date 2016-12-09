@@ -33,7 +33,7 @@ require_once('signup.php');
 <center>
   <a>Please enter your information:</a><br><br>
 
-  <form action="signup_form.php" method:"POST">
+  <form action="signup_form.php" method="POST">
     <div class="divTable">
       <div class="divTR">
         <div class="divTD"><a>Email:</a></div>
