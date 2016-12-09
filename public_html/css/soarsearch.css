@@ -6,24 +6,25 @@ body {
 }
 p {
   text-align: center;
-  color: black;
+  color: #FFFFFF;
 }
 h1 {
   text-align: center;
-  color: #950442;
+  color: #FFFFFF;
   padding-bottom: 1%;
 }
 h2 {
   text-align: center;
-  color: #950442;
+  color: #FFFFFF;
   padding-bottom: 1%;
 }
-#spacing {
-  padding-bottom: 2%;
+td {
+  font-style: normal;
+  font-family: "Verdana", Verdana, sans-serif;
+  color: #FFFFFF;
 }
 #search {
   padding-top: 1%;
   width: 40%;
   margin: auto;
-  background: #D7D1E9;
 }
