@@ -8,16 +8,16 @@ function sanitizeString($_db, $str)
     return mysqli_real_escape_string($_db, $str);
 }
 
-function SaveStudentsToDB($_db, $_login, $_first_name, $_last_name, $_student_id, $_email , $_password)
+function SaveStudentsToDB($_db, $_first_name, $_last_name, $_student_id, $_email , $_password)
 {
   /* Prepared statement, stage 1: prepare query */
-  if (!($stmt = $_db->prepare("INSERT INTO students(login, first_name, last_name, student_id, email, password) VALUES (?, ?, ?, ?, ?, ?)")))
+  if (!($stmt = $_db->prepare("INSERT INTO students(first_name, last_name, student_id, email, password) VALUES (?, ?, ?, ?, ?)")))
   {
     echo "Prepare failed: (" . $_db->errno . ") " . $_db->error;
   }
 
   /* Prepared statement, stage 2: bind parameters*/
-  if (!$stmt->bind_param('ssssss', $_login, $_first_name, $_last_name, $_student_id, $_email , $_password))
+  if (!$stmt->bind_param('sssss', $_first_name, $_last_name, $_student_id, $_email , $_password))
   {
     echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
@@ -25,17 +25,18 @@ function SaveStudentsToDB($_db, $_login, $_first_name, $_last_name, $_student_id
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
-    echo "<h3> Username Taken! </h3>";
+    echo "<h3> Email Taken! </h3>";
   }
   else
   {
     echo "<h3> Signup Successful </h3>";
     session_start();
-    $_SESSION['username'] = $_username;
     $_SESSION['password'] = $_password;
     $_SESSION['email'] = $_email;
     $_SESSION['firstname'] = $_first_name;
     $_SESSION['lastname'] = $_last_name;
+    $_SESSION['studentid'] =  $_student_id
+    header('Location: /main_menu.php');
   }
 }
 

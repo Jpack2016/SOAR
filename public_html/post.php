@@ -51,11 +51,12 @@ if(isset($_POST['address1'])||isset($_POST['phone1'])||isset($_POST['school_name
   $skill_name = sanitizeString($db, $_POST['skill_name']);
   $proficiency_name = sanitizeString($db, $_POST['proficiency_name']);
 
-  echo $login, $first_name, $last_name, $student_id, $email, $open_id, $address1, $address2, $address3, $city, $state_code, $zip, $country, $phone1, $phone2, $summary_text, $additional_text,
+  echo $address1, $address2, $address3, $city, $state_code, $zip, $country, $phone1, $phone2, $summary_text, $additional_text,
   $school_name, $degree_type_name, $study_area, $graduation_month, $graduation_year, $job_position_name, $company_name, $start_date, $end_date, $skill_name, $proficiency_name;
 
-  SaveStudentsToDB($db, $login, $firstname, $last_name, $student_id, $email , $open_id);
-  SaveStudentInfoToDB($db, $studentid, $address1, $address2, $address3, $city, $state_code, $zip, $country, $phone1, $phone2);
+  $student_id = $_SESSION['studentid'];
+
+  SaveStudentInfoToDB($db, $student_id, $address1, $address2, $address3, $city, $state_code, $zip, $country, $phone1, $phone2);
   SaveStudentSummaryToDB($db, $student_id, $summary_text);
   SaveStudentAdditionalToDB($db, $student_id, $additional_text);
   SaveStudentEducationToDB($db, $student_id, $school_name, $degree_name, $study_area, $graduation_month, $graduation_year);
