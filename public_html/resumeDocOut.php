@@ -45,13 +45,7 @@ $data['skills'][] = array('skill_name'=>'Microcontrollers/MSP430','prof_level'=>
 $data['employment'] = array();
 $data['employment'][] = array('location'=>'McD','position'=>'flipper','start_date'=>'10/05/12','end_date'=>'10/08/12');
 
-// Other single data items
-$x_num = 3152.456;
-$x_pc = 0.2567;
-$x_dt = mktime(13,0,0,2,15,2010);
-$x_bt = true;
-$x_bf = false;
-$x_delete = 1;
+
 
 // -----------------
 // Load the template
@@ -73,16 +67,6 @@ if (isset($_POST['debug']) && ($_POST['debug']=='show'))    $TBS->Plugin(OPENTBS
 
 // Merge data in the body of the document
 $TBS->MergeBlock('a', $data);
-
-// Change chart series
-$ChartNameOrNum = 'a nice chart'; // Title of the shape that embeds the chart
-$SeriesNameOrNum = 'Series 2';
-$NewValues = array( array('Category A','Category B','Category C','Category D'), array(3, 1.1, 4.0, 3.3) );
-$NewLegend = "Updated series 2";
-$TBS->PlugIn(OPENTBS_CHART, $ChartNameOrNum, $SeriesNameOrNum, $NewValues, $NewLegend);
-
-// Delete comments
-$TBS->PlugIn(OPENTBS_DELETE_COMMENTS);
 
 // -----------------
 // Output the result
