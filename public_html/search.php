@@ -4,7 +4,7 @@
     if($_POST['search']=='study')
     {
       $sql='SELECT study_area FROM ref_study_area ORDER BY study_area ASC';
-      $result = mysql_query($sql);
+      $result = $db.mysql_query($sql);
       $dropdown=array();
 
       while($row = mysql_fetch_array($result)) {
@@ -15,7 +15,7 @@
     if($_POST['search']=='degree')
     {
       $sql='SELECT degree_name FROM ref_degree  ORDER BY degree_name ASC';
-      $result = mysql_query($sql);
+      $result = $db.mysql_query($sql);
       $dropdown=array();
 
       while($row = mysql_fetch_array($result)) {
@@ -26,7 +26,7 @@
     if($_POST['search']=='job')
     {
       $sql='SELECT position_name FROM ref_job_position ORDER BY position_name ASC';
-      $result = mysql_query($sql);
+      $result = $db.mysql_query($sql);
       $dropdown=array();
 
       while($row = mysql_fetch_array($result)) {
