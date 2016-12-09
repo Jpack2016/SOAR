@@ -23,7 +23,7 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 $yourname = (isset($_POST['yourname'])) ? $_POST['yourname'] : '';
 $yourname = trim(''.$yourname);
 if ($yourname=='') $yourname = "(no name)";
-
+/*
 $first_name = "first";
 $last_name = "last";
 $phone = "123-456-7890";
@@ -32,9 +32,58 @@ $add1 = "123 asdsa st";
 $add2 = "apt 5";
 $city = "Boca";
 $state = "FL";
-$zip = "33431";
+$zip = "33431"; */
+
+$address1 = $_SESSION['address1'];
+$address2 = $_SESSION['address2'];
+$address3 = $_SESSION['address3'];
+$city = $_SESSION['city'];
+$state_code = $_SESSION['state_code'];
+$zip = $_SESSION['zip'];
+$country = $_SESSION['country'];
+$phone1 = $_SESSION['phone1'];
+$phone2 = $_SESSION['phone2'];
+$summary_text = $_SESSION['summary_text'];
+$additional_text = $_SESSION['additional_text'];
+
+$school_name1 = $_SESSION['school_name1'];
+$degree_name1 = $_SESSION['degree_name1'];
+$study_area1 = $_SESSION['study_area1'];
+$graduation_month1 = $_SESSION['graduation_month1'];
+$graduation_year1 = $_SESSION['graduation_year1'];
+$job_position_name1 = $_SESSION['job_position_name1'];
+$company_name1 = $_SESSION['company_name1'];
+$start_date1 = $_SESSION['start_date1'];
+$end_date1 = $_SESSION['end_date1'];
+$skill_name1 = $_SESSION['skill_name1'];
+$proficiency_name1 = $_SESSION['proficiency_name1'];
+
+$school_name2 = $_SESSION['school_name2'];
+$degree_name2 = $_SESSION['degree_name2'];
+$study_area2 = $_SESSION['study_area2'];
+$graduation_month2 = $_SESSION['graduation_month2'];
+$graduation_year2 = $_SESSION['graduation_year2'];
+$job_position_name2 = $_SESSION['job_position_name2'];
+$company_name2 = $_SESSION['company_name2'];
+$start_date2 = $_SESSION['start_date2'];
+$end_date2 = $_SESSION['end_date2'];
+$skill_name2 = $_SESSION['skill_name2'];
+$proficiency_name2 = $_SESSION['proficiency_name2'];
+
+$school_name3 = $_SESSION['school_name3'];
+$degree_name3 = $_SESSION['degree_name3'];
+$study_area3 = $_SESSION['study_area3'];
+$graduation_month3 = $_SESSION['graduation_month3'];
+$graduation_year3 = $_SESSION['graduation_year3'];
+$job_position_name3 = $_SESSION['job_position_name3'];
+$company_name3 = $_SESSION['company_name3'];
+$start_date3 = $_SESSION['start_date3'];
+$end_date3 = $_SESSION['end_date3'];
+$skill_name3 = $_SESSION['skill_name3'];
+$proficiency_name3 = $_SESSION['proficiency_name3'];
 
 // A recordset for merging tables
+/*
 $data = array();
 $data['education'] = array();
 $data['education'][] = array('inst'=>'FAU','major'=>'CE','start_date'=>'12/01/14','end_date'=>'06/01/17');
@@ -44,7 +93,7 @@ $data['skills'][] = array('skill_name'=>'PHP','prof_level'=>'Expert');
 $data['skills'][] = array('skill_name'=>'Microcontrollers/MSP430','prof_level'=>'Intermediate');
 $data['employment'] = array();
 $data['employment'][] = array('location'=>'McD','position'=>'flipper','start_date'=>'10/05/12','end_date'=>'10/08/12');
-
+*/
 
 
 // -----------------
