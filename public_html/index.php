@@ -25,7 +25,7 @@
   font-family: "Verdana", Verdana, sans-serif;
   margin:auto;
   width:auto;
-  color:#B60215;
+  color:#FFFFFF;
   text-align:center;
 }
 
