@@ -43,7 +43,7 @@
 
     <div id="searchargs">
       <h2>What would you like to seach for?</h2>
-      <form id="seachform" method="POST" action="soarsearch.php">
+      <form id="seachform" method="POST" action="results.php">
         <p>
           <select name="search">
             <option value="blank"></option>
@@ -54,28 +54,22 @@
           </select>
         </p>
 
+	<table border="0" width="100%">
+      		<tr>
+        		<td align="right">Search Key Words: &nbsp;&nbsp;&nbsp;&nbsp;</td>
+        		<td align="left"><input type="text" id="skills" placeholder="Seacrhing for..."  /></td>
+      		</tr>
+    	</table>
+
       <p><input type="submit" value="Submit!"  /></p>
       </form>
-  </div>
-
-  <div id="searcharea">
-    <table border="0" width="100%">
-      <tr>
-        <td>Search Key Words:</td>
-        <td><input type="text" id="skills" placeholder="Seacrhing for..."  /></td>
-      </tr>
-    </table>
-
   </div>
 
 </body>
 </html>
 
 <?php
-require_once 'search.php';
-
-if(isset($_POST['search']) && ($_POST['search'] !== "blank")) {
-  echo $_POST['search'];
-}
+//require_once 'search.php';
+50
 
 ?>

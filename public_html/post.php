@@ -4,16 +4,30 @@ require_once 'function.php';
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
-echo "Do I even get here?";
-echo $_POST['#address1'] . PHP_EOL;
-echo $_POST['#phone1'] . PHP_EOL;
-echo $_POST['#school_name1'] . PHP_EOL;
-echo $_POST['#company_name1'] . PHP_EOL;
-echo $_POST['#skill_name1'] . PHP_EOL;
+/*echo $_POST['address1'] .  '<br />';//
+echo $_POST['address2'] .  '<br />';
+echo $_POST['address3'] .  '<br />';
+echo $_POST['city'] .  '<br />';
+echo $_POST['state_code'] .  '<br />';
+echo $_POST['zip'] .  '<br />';
+echo $_POST['country'] .  '<br />';
+echo $_POST['phone1'] .  '<br />';//
+echo $_POST['phone2'] .  '<br />';
+
+echo $_POST['school_name1'] . '<br />';
+echo $_POST['degree_name1'] . '<br />';
+echo $_POST['study_area1'] . '<br />';
+echo $_POST['graduation_month1'] . '<br />';
+echo $_POST['graduation_year1'] . '<br />';
+echo $_POST['job_position_name1'] . '<br />';
+echo $_POST['company_name1'] . '<br />';
+echo $_POST['start_date1'] . '<br />';
+echo $_POST['end_date1'] . '<br />';
+echo $_POST['skill_name1'] . '<br />';
+echo $_POST['proficiency_name1'] . '<br />';*/
 
 if(isset($_POST['address1'])||isset($_POST['phone1'])||isset($_POST['school_name1'])||isset($_POST['company_name1'])||isset($_POST['skill_name1']))
 {
-  echo "I got here!";
   $address1 = '';
   $address2 = '';
   $address3 = '';
@@ -85,16 +99,16 @@ if(isset($_POST['address1'])||isset($_POST['phone1'])||isset($_POST['school_name
   $end_date1 = sanitizeString($db, $_POST['end_date1']);
   $skill_name1 = sanitizeString($db, $_POST['skill_name1']);
   $proficiency_name1 = sanitizeString($db, $_POST['proficiency_name1']);
+
   SaveStudentInfoToDB($db, $student_id, $address1, $address2, $address3, $city, $state_code, $zip, $country, $phone1, $phone2);
   SaveStudentSummaryToDB($db, $student_id, $summary_text);
   SaveStudentAdditionalToDB($db, $student_id, $additional_text);
-  SaveStudentEducationToDB($db, $student_id, $school_name, $degree_name, $study_area, $graduation_month, $graduation_year);
-  SaveStudentExperienceToDB($db, $student_id, $job_position_name, $company_name, $start_date, $end_date);
-  SaveStudentSkillsToDB($db, $student_id, $skill_name, $proficiency_name);
+  SaveStudentEducationToDB($db, $student_id, $school_name1, $degree_name1, $study_area1, $graduation_month1, $graduation_year1);
+  SaveStudentExperienceToDB($db, $student_id, $job_position_name1, $company_name1, $start_date1, $end_date1);
+  SaveStudentSkillsToDB($db, $student_id, $skill_name1, $proficiency_name1);
 
   if(isset($_POST['school_name2'])||isset($_POST['company_name2'])||isset($_POST['skill_name2']))
   {
-  echo "I got here2!";
   $school_name2 = sanitizeString($db, $_POST['school_name2']);
   $degree_name2 = sanitizeString($db, $_POST['degree_name2']);
   $study_area2 = sanitizeString($db, $_POST['study_area2']);
@@ -112,7 +126,6 @@ if(isset($_POST['address1'])||isset($_POST['phone1'])||isset($_POST['school_name
 }
 if(isset($_POST['school_name3'])||isset($_POST['company_name3'])||isset($_POST['skill_name3']))
 {
-  echo "I got here3!";
   $school_name3 = sanitizeString($db, $_POST['school_name3']);
   $degree_name3 = sanitizeString($db, $_POST['degree_name3']);
   $study_area3 = sanitizeString($db, $_POST['study_area3']);
@@ -242,4 +255,6 @@ if(isset($_POST['school_name3'])||isset($_POST['company_name3'])||isset($_POST['
   }
 
 }
+
+header('location: main_menu.php');
 ?>

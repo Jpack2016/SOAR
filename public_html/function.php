@@ -57,6 +57,7 @@ function SaveStudentInfoToDB($_db, $_student_id, $_address1, $_address2, $_addre
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
+    echo "STUDENT INFO IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
@@ -78,6 +79,7 @@ function SaveStudentSummaryToDB($_db, $_student_id, $_summary_text)
 	/* Prepared statement, stage 3: execute*/
 	if (!$stmt->execute())
 	{
+    echo "STUDENT SUMMARY IS THE CULPRIT!" . '<br  />';
 		echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 	}
 }
@@ -99,6 +101,7 @@ function SaveStudentAdditionalToDB($_db, $_student_id, $_additional_text)
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
+    echo "STUDENT ADDITIONAL IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
@@ -120,6 +123,7 @@ function SaveStudentEducationToDB($_db, $_student_id, $_school_name, $_degree_na
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
+    echo "STUDENT EDU IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
@@ -141,6 +145,7 @@ function SaveStudentExperienceToDB($_db, $_student_id, $_job_position_name, $_co
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
+    echo "STUDENT EXPERIENCE IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
@@ -148,7 +153,7 @@ function SaveStudentExperienceToDB($_db, $_student_id, $_job_position_name, $_co
 function SaveStudentSkillsToDB($_db, $_student_id, $_skill_name, $_proficiency_name)
 {
   /* Prepared statement, stage 1: prepare query */
-  if (!($stmt = $_db->prepare("INSERT INTO WALL(student_id, skill_name, proficiency_name) VALUES (?, ?, ?)")))
+  if (!($stmt = $_db->prepare("INSERT INTO student_skills(student_id, skill_name, proficiency_name) VALUES (?, ?, ?)")))
   {
     echo "Prepare failed: (" . $_db->errno . ") " . $_db->error;
   }
@@ -162,13 +167,14 @@ function SaveStudentSkillsToDB($_db, $_student_id, $_skill_name, $_proficiency_n
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
+    echo "STUDENT SKILLS IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
 /*
 function SaveRefProficiencyToDB($_db, $_proficiency_name)
 {
-   Prepared statement, stage 1: prepare query 
+   Prepared statement, stage 1: prepare query
 	if (!($stmt = $_db->prepare("INSERT INTO ref_proficiency(proficiency_name) VALUES (?)")))
 	{
 		echo "Prepare failed: (" . $_db->errno . ") " . $_db->error;

@@ -1,7 +1,3 @@
-<?php
-require_once "post.php";
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +28,7 @@ require_once "post.php";
 
   <div id="surveyinfo">
 
-    <form id="surveyinfoform" method="post" action="soar.php">
+    <form id="surveyinfoform" method="post" action="post.php">
 
       <div id="basicinfo">
 
@@ -43,47 +39,47 @@ require_once "post.php";
 
             <tr>
               <td>Address Line 1:</td>
-              <td><input type="text" id="address1" placeholder="Address..." /></td>
+              <td><input type="text" name="address1" placeholder="Address..." /></td>
             </tr>
 
             <tr>
               <td>Address Line 2:</td>
-              <td><input type="text" id="address2" placeholder="Address..." /></td>
+              <td><input type="text" name="address2" placeholder="Address..." /></td>
             </tr>
 
             <tr>
               <td>Address Line 3:</td>
-              <td><input type="text" id="address3" placeholder="Address..." /></td>
+              <td><input type="text" name="address3" placeholder="Address..." /></td>
             </tr>
 
             <tr>
               <td>City:</td>
-              <td><input type="text" id="city" placeholder="Boca Raton" /></td>
+              <td><input type="text" name="city" placeholder="Boca Raton" /></td>
             </tr>
 
             <tr>
               <td>State:</td>
-              <td><input type="text" maxlength="2" id="state_code" placeholder="FL" /></td>
+              <td><input type="text" maxlength="2" name="state_code" placeholder="FL" /></td>
             </tr>
 
             <tr>
               <td>Country:</td>
-              <td><input type="text" id="address3" placeholder="USA" /></td>
+              <td><input type="text" name="country" placeholder="USA" /></td>
             </tr>
 
             <tr>
               <td>Zip Code:</td>
-              <td><input type="text" maxlength="5" id="zip" placeholder="33434" /></td>
+              <td><input type="text" maxlength="5" name="zip" placeholder="33434" /></td>
             </tr>
 
             <tr>
               <td>Primary Phone:</td>
-              <td><input type="text" maxlength="12" id="phone1" placeholder="561-000-0000" /></td>
+              <td><input type="text" maxlength="12" name="phone1" placeholder="561-000-0000" /></td>
             </tr>
 
             <tr>
               <td>Secondary Phone:</td>
-              <td><input type="text" maxlength="12" id="phone2" placeholder="561-000-0000" /></td>
+              <td><input type="text" maxlength="12" name="phone2" placeholder="561-000-0000" /></td>
             </tr>
 
           </table>
@@ -122,8 +118,18 @@ require_once "post.php";
             </tr>
 
             <tr>
+              <td>Graduation Month:</td>
+              <td><input type="text" name="graduation_month1" placeholder="May" /></td>
+            </tr>
+
+            <tr>
+              <td>Graduation Year:</td>
+              <td><input type="text" name="graduation_year1" placeholder="2016" /></td>
+            </tr>
+
+            <tr>
               <td>School:</td>
-              <td><input type="text" id="school_name1" placeholder="Florida Atlantic University" /></td>
+              <td><input type="text" name="school_name1" placeholder="Florida Atlantic University" /></td>
             </tr>
 
           </table>
@@ -163,8 +169,18 @@ require_once "post.php";
               </tr>
 
               <tr>
+                <td>Graduation Month:</td>
+                <td><input type="text" name="graduation_month2" placeholder="May" /></td>
+              </tr>
+
+              <tr>
+                <td>Graduation Year:</td>
+                <td><input type="text" name="graduation_year2" placeholder="2016" /></td>
+              </tr>
+
+              <tr>
                 <td>School:</td>
-                <td><input type="text" id="school_name2" placeholder="Florida Atlantic University" /></td>
+                <td><input type="text" name="school_name2" placeholder="Florida Atlantic University" /></td>
               </tr>
 
             </table>
@@ -206,8 +222,18 @@ require_once "post.php";
               </tr>
 
               <tr>
+                <td>Graduation Month:</td>
+                <td><input type="text" name="graduation_month3" placeholder="May" /></td>
+              </tr>
+
+              <tr>
+                <td>Graduation Year:</td>
+                <td><input type="text" name="graduation_year3" placeholder="2016" /></td>
+              </tr>
+
+              <tr>
                 <td>School:</td>
-                <td><input type="text" id="school_name3" placeholder="Florida Atlantic University" /></td>
+                <td><input type="text" name="school_name3" placeholder="Florida Atlantic University" /></td>
               </tr>
 
             </table>
@@ -229,7 +255,7 @@ require_once "post.php";
 
             <tr>
               <td>Software/Hardware: </td>
-              <td><input type="text" id="skill_name1" /></td>
+              <td><input type="text" name="skill_name1" /></td>
             </tr>
 
             <tr>
@@ -237,11 +263,11 @@ require_once "post.php";
               <td>
                 <select name="proficiency_name1">
                   <option value="blank"></option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <option value="one">1</option>
+                  <option value="two">2</option>
+                  <option value="three">3</option>
+                  <option value="four">4</option>
+                  <option value="five">5</option>
                 </select>
               </td>
             </tr>
@@ -257,7 +283,7 @@ require_once "post.php";
 
               <tr>
                 <td>Software/Hardware: </td>
-                <td><input type="text" id="skill_name2" /></td>
+                <td><input type="text" name="skill_name2" /></td>
               </tr>
 
               <tr>
@@ -265,11 +291,11 @@ require_once "post.php";
                 <td>
                   <select name="proficiency_name2">
                     <option value="blank"></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
                   </select>
                 </td>
               </tr>
@@ -287,19 +313,19 @@ require_once "post.php";
 
               <tr>
                 <td>Software/Hardware: </td>
-                <td><input type="text" id="skill_name3" /></td>
+                <td><input type="text" name="skill_name3" /></td>
               </tr>
 
               <tr>
                 <td>Proficiency Level:</td>
                 <td>
-                  <select name="proficiency_name3">
+                  <select name="proficiency_name5">
                     <option value="blank"></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
                   </select>
                 </td>
               </tr>
@@ -321,22 +347,22 @@ require_once "post.php";
 
             <tr>
               <td>Company Name:</td>
-              <td><input type="text" id="company_name1" placeholder="CompanyName" /></td>
+              <td><input type="text" name="company_name1" placeholder="CompanyName" /></td>
             </tr>
 
             <tr>
               <td>Position:</td>
-              <td><input type="text" id="job_position_name1" placeholder="Position" /></td>
+              <td><input type="text" name="job_position_name1" placeholder="Position" /></td>
             </tr>
 
             <tr>
               <td>Start Date:</td>
-              <td><input type="date" id="start_date1" placeholder="mm/dd/yyyy" /></td>
+              <td><input type="date" name="start_date1" placeholder="mm/dd/yyyy" /></td>
             </tr>
 
             <tr>
               <td>End Date:</td>
-              <td><input type="date" id="end_date1" placeholder="mm/dd/yyyy"  /></td>
+              <td><input type="date" name="end_date1" placeholder="mm/dd/yyyy"  /></td>
             </tr>
 
           </table>
@@ -352,22 +378,22 @@ require_once "post.php";
 
               <tr>
                 <td>Company Name:</td>
-                <td><input type="text" id="company_name2" placeholder="CompanyName" /></td>
+                <td><input type="text" name="company_name2" placeholder="CompanyName" /></td>
               </tr>
 
               <tr>
                 <td>Position:</td>
-                <td><input type="text" id="job_position_name2" placeholder="Position" /></td>
+                <td><input type="text" name="job_position_name2" placeholder="Position" /></td>
               </tr>
 
               <tr>
                 <td>Start Date:</td>
-                <td><input type="date" id="start_date2" placeholder="mm/dd/yyyy" /></td>
+                <td><input type="date" name="start_date2" placeholder="mm/dd/yyyy" /></td>
               </tr>
 
               <tr>
                 <td>End Date:</td>
-                <td><input type="date" id="end_date2" placeholder="mm/dd/yyyy"  /></td>
+                <td><input type="date" name="end_date2" placeholder="mm/dd/yyyy"  /></td>
               </tr>
 
             </table>
@@ -385,22 +411,22 @@ require_once "post.php";
 
               <tr>
                 <td>Company Name:</td>
-                <td><input type="text" id="company_name3" placeholder="CompanyName" /></td>
+                <td><input type="text" name="company_name3" placeholder="CompanyName" /></td>
               </tr>
 
               <tr>
                 <td>Position:</td>
-                <td><input type="text" id="job_position_name3" placeholder="Position" /></td>
+                <td><input type="text" name="job_position_name3" placeholder="Position" /></td>
               </tr>
 
               <tr>
                 <td>Start Date:</td>
-                <td><input type="date" id="start_date3" placeholder="mm/dd/yyyy" /></td>
+                <td><input type="date" name="start_date3" placeholder="mm/dd/yyyy" /></td>
               </tr>
 
               <tr>
                 <td>End Date:</td>
-                <td><input type="date" id="end_date3" placeholder="mm/dd/yyyy"  /></td>
+                <td><input type="date" name="end_date3" placeholder="mm/dd/yyyy"  /></td>
               </tr>
 
             </table>
@@ -418,19 +444,19 @@ require_once "post.php";
       <div id="additionalinfo">
           <h2>Additional Information</h2>
           <p>Type a quick introduction about yourself!</p>
-          <p><textarea rows="10" cols="75" id="summary_text" placeholder="Quick Introduction..."></textarea></p>
+          <p><textarea rows="10" cols="75" name="summary_text" placeholder="Quick Introduction..."></textarea></p>
 
           <br />
           <hr width="100%" />
           <br  />
 
           <p>Use this area to type any additional information that you may think is relevant, including awards or extra-curricular activities!</p>
-          <p><textarea rows="10" cols="75" id="additional_text" placeholder="Additional Info..."></textarea></p>
+          <p><textarea rows="10" cols="75" name="additional_text" placeholder="Additional Info..."></textarea></p>
 
           <br />
           <hr width="100%" />
           <br />
-          <input type="button" id="addinfoback" value="Back!" /><input type="submit" id="done" value="Submit!" />
+          <input type="button" id="addinfoback" value="Back!" /><input type="submit" name="submit" value="Submit">
 
       </div>
 
