@@ -39,9 +39,9 @@ $data = array();
 $data['education'] = array();
 $data['education'][] = array('inst'=>'FAU','major'=>'CE','start_date'=>'12/01/14','end_date'=>'06/01/17');
 $data['skills'] = array();
-$data['skills'][] = array('skills'=>('skill_name'=>'C++','prof_level'=>'Intermediate'));
-$data['skills'][] = array('skills'=>('skill_name'=>'PHP','prof_level'=>'Expert'));
-$data['skills'][] = array('skills'=>('skill_name'=>'Microcontrollers/MSP430','prof_level'=>'Intermediate'));
+$data['skills'][] = array('skill_name'=>'C++','prof_level'=>'Intermediate'));
+$data['skills'][] = array('skill_name'=>'PHP','prof_level'=>'Expert'));
+$data['skills'][] = array('skill_name'=>'Microcontrollers/MSP430','prof_level'=>'Intermediate'));
 $data['employment'] = array();
 $data['employment'][] = array('location'=>'McD','position'=>'flipper','start_date'=>'10/05/12','end_date'=>'10/08/12');
 
