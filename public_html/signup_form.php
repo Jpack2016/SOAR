@@ -17,6 +17,7 @@ include_once('signup.php');
 }
 
 .divTD, .divTableHead {
+  font-family: "Verdana", Verdana, sans-serif;
 	border: none;
 	display: table-cell;
 	padding: 3px 10px;
@@ -44,7 +45,7 @@ include_once('signup.php');
       </div>
       <div class="divTR">
         <div class="divTD"><a>Retype password:</a></div>
-        <div class="divTD"><input type="password" name="password"></div>
+        <div class="divTD"><input type="password" name="password2"></div>
       </div>
       <div class="divTR">
         <div class="divTD"><a>First Name:</a></div>

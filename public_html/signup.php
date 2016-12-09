@@ -23,10 +23,13 @@ function signup() {
 
   SaveStudentsToDB($db, $first_name, $last_name, $student_id, $email, $token);
 }
-
-if(isset($_POST['email'])||isset($_POST['password'])||isset($_POST['student_id'])||isset($_POST['first_name'])||isset($_POST['last_name']))
-{
-  signup();
+if($_POST['password'] == $_POST['password2']) {
+  if(isset($_POST['email'])||isset($_POST['password'])||isset($_POST['student_id'])||isset($_POST['first_name'])||isset($_POST['last_name']))
+  {
+    signup();
+  }
+}else{
+  $message = "Passwords do not match";
+  echo "<script type='text/javascript'>alert('$message');</script>";
 }
-
 ?>

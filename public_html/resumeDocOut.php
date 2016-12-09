@@ -2,7 +2,7 @@
 
 // Include classes
 include_once('tbs_class.php'); // Load the TinyButStrong template engine
-include_once('../tbs_plugin_opentbs.php'); // Load the OpenTBS plugin
+include_once('tbs_plugin_opentbs.php'); // Load the OpenTBS plugin
 
 // prevent from a PHP configuration problem when using mktime() and date()
 if (version_compare(PHP_VERSION,'5.1.0')>=0) {
@@ -24,11 +24,29 @@ $yourname = (isset($_POST['yourname'])) ? $_POST['yourname'] : '';
 $yourname = trim(''.$yourname);
 if ($yourname=='') $yourname = "(no name)";
 
+$first_name = "first";
+$last_name = "last";
+$phone = "123-456-7890";
+$email =  "asdasd@kloijhfsd.com";
+$add1 = "123 asdsa st";
+$add2 = "apt 5";
+$city = "Boca";
+$state = "FL";
+$zip = "33431";
+
+$data = array("education"=>array('inst'=>'FAU','major'=>'CE','start_date'=>'12/01/14','end_date'=>'06/01/17'),'skills'=>('C++','Intermediate'));
+
+
 // A recordset for merging tables
 $data = array();
-$data[] = array('rank'=> 'A', 'firstname'=>'Sandra' , 'name'=>'Hill'      , 'number'=>'1523d', 'score'=>200, 'email_1'=>'sh@tbs.com',  'email_2'=>'sandra@tbs.com',  'email_3'=>'s.hill@tbs.com');
-$data[] = array('rank'=> 'A', 'firstname'=>'Roger'  , 'name'=>'Smith'     , 'number'=>'1234f', 'score'=>800, 'email_1'=>'rs@tbs.com',  'email_2'=>'robert@tbs.com',  'email_3'=>'r.smith@tbs.com' );
-$data[] = array('rank'=> 'B', 'firstname'=>'William', 'name'=>'Mac Dowell', 'number'=>'5491y', 'score'=>130, 'email_1'=>'wmc@tbs.com', 'email_2'=>'william@tbs.com', 'email_3'=>'w.m.dowell@tbs.com' );
+$data['education'] = array();
+$data['education'][] = array('inst'=>'FAU','major'=>'CE','start_date'=>'12/01/14','end_date'=>'06/01/17')
+$data['skills'] = array();
+$data['skills'][] = array('skills'=>('skill_name'=>'C++','prof_level'=>'Intermediate'));
+$data['skills'][] = array('skills'=>('skill_name'=>'PHP','prof_level'=>'Expert'));
+$data['skills'][] = array('skills'=>('skill_name'=>'Microcontrollers/MSP430','prof_level'=>'Intermediate'));
+$data['employment'] = array();
+$data['employment'][] = array('location'=>'McD','position'=>'flipper','start_date'=>'10/05/12','end_date'=>'10/08/12');
 
 // Other single data items
 $x_num = 3152.456;

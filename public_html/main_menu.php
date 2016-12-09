@@ -77,9 +77,9 @@ li{
 <h1 style="text-align:center; font-size:55px;" id="welcome">Welcome to SOAR </h1>
 
 <ul class="stylez">
-    <li><button class="button"><span>Create Resume </span></button></li>
     <li><button class="button"><span>Edit Resume </span></button></li>
     <li><button class="button"><span>Search Database </span></button></li>
+    <li><button class="button"><span>View/Export Resume </span></button></li>
 </ul>
 
 </body>
