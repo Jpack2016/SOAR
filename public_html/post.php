@@ -4,6 +4,8 @@ require_once 'function.php';
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
+echo "Do I even get here?";
+
 if(isset($_POST['address1'])||isset($_POST['phone1'])||isset($_POST['school_name1'])||isset($_POST['company_name1'])||isset($_POST['skill_name1']))
 {
   echo "I got here!";
