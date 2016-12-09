@@ -73,7 +73,7 @@ li{
 }
 </style>
 </head>
-<body>
+<body background="background.png">
 <h1 style="text-align:center; font-size:55px;" id="welcome">Welcome to SOAR </h1>
 
 <ul class="stylez">

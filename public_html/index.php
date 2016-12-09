@@ -7,7 +7,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="soarresume.css" >
+<link rel="stylesheet" type="text/css" href="soarresume.css">
 <style>
 
 #loginbox {
@@ -31,7 +31,7 @@
 
 </style>
 </head>
-<body>
+<body background="background.png">
 <div id="loginbox">
 <img src="images/logo.png" alt="Logo"><br>
 <a id="welcome">Welcome to SOAR<br>
