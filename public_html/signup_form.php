@@ -9,14 +9,15 @@ include_once('signup.php');
 <style>
 .divTable{
 	display: table;
-	width: 100%;
+	width: auto;
+  margin: auto;
 }
 .divTR {
 	display: table-row;
 }
 
 .divTD, .divTableHead {
-	border: 1px solid #999999;
+	border: none;
 	display: table-cell;
 	padding: 3px 10px;
   align-content: flex-start;
@@ -43,7 +44,7 @@ include_once('signup.php');
       </div>
       <div class="divTR">
         <div class="divTD"><a>Retype password:</a></div>
-        <div class="divTD"><input type="password" name="password">?</div>
+        <div class="divTD"><input type="password" name="password"></div>
       </div>
       <div class="divTR">
         <div class="divTD"><a>First Name:</a></div>
