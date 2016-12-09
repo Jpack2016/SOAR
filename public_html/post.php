@@ -5,32 +5,63 @@ session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
 echo "Do I even get here?";
+echo $_POST['address1'] . PHP_EOL;
+echo $_POST['phone1'] . PHP_EOL;
+echo $_POST['school_name1'] . PHP_EOL;
+echo $_POST['company_name1'] . PHP_EOL;
+echo $_POST['skill_name1'] . PHP_EOL;
 
 if(isset($_POST['address1'])||isset($_POST['phone1'])||isset($_POST['school_name1'])||isset($_POST['company_name1'])||isset($_POST['skill_name1']))
 {
   echo "I got here!";
-  $_address1 = '';
-  $_address2 = '';
-  $_address3 = '';
-  $_city = '';
-  $_state_code = '';
-  $_zip = '';
-  $_country = '';
-  $_phone1 = '';
-  $_phone2 = '';
-  $_summary_text = '';
-  $_additional_text = '';
-  $_school_name = '';
-  $_degree_type_name = '';
-  $_study_area = '';
-  $_graduation_month = '';
-  $_graduation_year = '';
-  $_job_position_name = '';
-  $_company_name = '';
-  $_start_date = '';
-  $_end_date = '';
-  $_skill_name = '';
-  $_proficiency_name = '';
+  $address1 = '';
+  $address2 = '';
+  $address3 = '';
+  $city = '';
+  $state_code = '';
+  $zip = '';
+  $country = '';
+  $phone1 = '';
+  $phone2 = '';
+  $summary_text = '';
+  $additional_text = '';
+
+  $school_name1 = '';
+  $degree_name1 = '';
+  $study_area1 = '';
+  $graduation_month1 = '';
+  $graduation_year1 = '';
+  $job_position_name1 = '';
+  $company_name1 =  '';
+  $start_date1 =  '';
+  $end_date1 =  '';
+  $skill_name1 =  '';
+  $proficiency_name1 = '';
+
+  $school_name2 = '';
+  $degree_name2 = '';
+  $study_area2 = '';
+  $graduation_month2 = '';
+  $graduation_year2 = '';
+  $job_position_name2 = '';
+  $company_name2 =  '';
+  $start_date2 =  '';
+  $end_date2 =  '';
+  $skill_name2 =  '';
+  $proficiency_name2 = '';
+
+  $school_name3 = '';
+  $degree_name3 = '';
+  $study_area3 = '';
+  $graduation_month3 = '';
+  $graduation_year3 = '';
+  $job_position_name3 = '';
+  $company_name3 =  '';
+  $start_date3 =  '';
+  $end_date3 =  '';
+  $skill_name3 =  '';
+  $proficiency_name3 = '';
+
   $student_id = $_SESSION['studentid'];
   $address1 = sanitizeString($db, $_POST['address1']);
   $address2 = sanitizeString($db, $_POST['address2']);
