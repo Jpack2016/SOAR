@@ -37,7 +37,7 @@ $zip = "33431";
 // A recordset for merging tables
 $data = array();
 $data['education'] = array();
-$data['education'][] = array('inst'=>'FAU','major'=>'CE','start_date'=>'12/01/14','end_date'=>'06/01/17')
+$data['education'][] = array('inst'=>'FAU','major'=>'CE','start_date'=>'12/01/14','end_date'=>'06/01/17');
 $data['skills'] = array();
 $data['skills'][] = array('skills'=>('skill_name'=>'C++','prof_level'=>'Intermediate'));
 $data['skills'][] = array('skills'=>('skill_name'=>'PHP','prof_level'=>'Expert'));
