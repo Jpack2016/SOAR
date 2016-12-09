@@ -9,7 +9,7 @@ require_once('reset.php');
 </head>
 <body background="background.png">
 <div id="resetbox">
-<center>
+<center style="margin-top:100px">
   <a>Enter your email to receive a new password</a><br>
   <form action='reset_password.php'>
       <a>Email:</a>
