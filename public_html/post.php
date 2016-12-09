@@ -3,14 +3,8 @@ require_once 'db_connect.php';
 require_once 'function.php';
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
-if(isset($_POST['first_name']))
+if(isset($_POST['address1'])||isset($_POST['phone1'])||isset($_POST['school_name'])||isset($_POST['company_name'])||isset($_POST['skill_name']))
 {
-  $login = '';
-  $_first_name = '';
-  $_last_name = '';
-  $_student_id = '';
-  $_email = '';
-  $_open_id = '';
   $_address1 = '';
   $_address2 = '';
   $_address3 = '';
@@ -34,12 +28,6 @@ if(isset($_POST['first_name']))
   $_skill_name = '';
   $_proficiency_name = '';
 
-  $login = sanitizeString($db, $_POST['login']);
-  $first_name = sanitizeString($db, $_POST['first_name']);
-  $last_name = sanitizeString($db, $_POST['last_name']);
-  $student_id = sanitizeString($db, $_POST['student_id']);
-  $email = sanitizeString($db, $_POST['email']);
-  $open_id = sanitizeString($db, $_POST['open_id']);
   $address1 = sanitizeString($db, $_POST['address1']);
   $address2 = sanitizeString($db, $_POST['address2']);
   $address3 = sanitizeString($db, $_POST['address3']);
