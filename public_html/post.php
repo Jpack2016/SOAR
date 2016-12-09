@@ -5,11 +5,11 @@ session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
 echo "Do I even get here?";
-echo $_POST['address1'] . PHP_EOL;
-echo $_POST['phone1'] . PHP_EOL;
-echo $_POST['school_name1'] . PHP_EOL;
-echo $_POST['company_name1'] . PHP_EOL;
-echo $_POST['skill_name1'] . PHP_EOL;
+echo $_POST['#address1'] . PHP_EOL;
+echo $_POST['#phone1'] . PHP_EOL;
+echo $_POST['#school_name1'] . PHP_EOL;
+echo $_POST['#company_name1'] . PHP_EOL;
+echo $_POST['#skill_name1'] . PHP_EOL;
 
 if(isset($_POST['address1'])||isset($_POST['phone1'])||isset($_POST['school_name1'])||isset($_POST['company_name1'])||isset($_POST['skill_name1']))
 {
