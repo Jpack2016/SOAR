@@ -1,6 +1,12 @@
 <?php
     require_once 'db_connect.php';
     echo "actually trying";
+
+    $sql="SELECT skill_name FROM ref_skills ORDER BY skill_name ASC";
+    $result = mysql_query($sql);
+    echo $result;
+    echo $sql;
+
     if($_POST['search']=='study')
     {
       $sql="SELECT study_area FROM ref_study_area ORDER BY study_area ASC";
