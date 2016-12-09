@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  background-repeat: no-repeat;
+	background-size: cover;
+}
+p {
+  text-align: center;
+  color: #FFFFFF;
+}
+h1 {
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: 1%;
+}
+h2 {
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: 1%;
+}
+td {
+  font-style: normal;
+  font-family: "Verdana", Verdana, sans-serif;
+  color: #FFFFFF;
+}
+#search {
+  padding-top: 1%;
+  width: 40%;
+  margin: auto;
+}
