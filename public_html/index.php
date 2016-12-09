@@ -49,7 +49,7 @@ A Resume Builder</a><br><br>
       <input type='submit'  value='Click here to sign up'>
 
   </form>
-  <a href='resetPassword.php'>Forgot your password?</a>
+  <a href='reset_password.php'>Forgot your password?</a>
 </center>
 </div>
 </body>
