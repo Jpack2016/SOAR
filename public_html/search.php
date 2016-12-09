@@ -36,6 +36,7 @@
     if(isset($_POST['skill']))
     {
       $result = $db->query("SELECT * FROM ref_skills WHERE skill_name LIKE '%".$q."%' ORDER BY skill_name ASC");
+      echo "$result ".$result;
       $dropdown=array();
         while($row = mysql_fetch_array($result)) {
           array_push($dropdown, $row['skill_name']);
