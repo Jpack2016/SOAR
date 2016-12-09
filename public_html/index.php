@@ -44,7 +44,7 @@ A Resume Builder</a><br><br>
       <input type="submit" value="Login">
       <br><br>
   </form>
-  <form action='signup.php'>
+  <form action='signup_form.php'>
       <input type='submit'  value='Click here to sign up'>
 
   </form>
