@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
 <head>
 
@@ -43,7 +43,7 @@
 
     <div id="searchargs">
       <h2>What would you like to seach for?</h2>
-      <form id="seachform" method="POST" action="results.php">
+      <form id="seachform" method="POST" action="soarsearch.php">
         <p>
           <select name="search">
             <option value="blank"></option>
@@ -54,22 +54,59 @@
           </select>
         </p>
 
-	<table border="0" width="100%">
-      		<tr>
-        		<td align="right">Search Key Words: &nbsp;&nbsp;&nbsp;&nbsp;</td>
-        		<td align="left"><input type="text" id="skills" placeholder="Seacrhing for..."  /></td>
-      		</tr>
-    	</table>
-
       <p><input type="submit" value="Submit!"  /></p>
       </form>
   </div>
 
+  <div id="searcharea">
+    <table border="0" width="100%">
+      <tr>
+        <td>Search Key Words:</td>
+        <td><input type="text" id="skills" placeholder="Seacrhing for..."  /></td>
+      </tr>
+    </table>
+
+  </div>
+
 </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <title>PHP MySQL Typeahead Autocomplete</title>
+    <meta charset="utf-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//netsh.pp.ua/upwork-demo/1/js/typeahead.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $( "#skills" ).autocomplete({
+            source: 'search.php'
+        });
+    });
+    </script>
+</head>
+
+<body>
+  <div class="ui-widget">
+    <label for="skills">Skills:</label>
+    <input id="skills">
+  </div>
+</body>
+
 </html>
 
 <?php
-//require_once 'search.php';
-50
+
+if(isset($_POST['search']) && ($_POST['search'] !== "blank")) {
+  echo $_POST['search'];
+}
 
 ?>

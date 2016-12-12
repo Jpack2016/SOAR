@@ -57,7 +57,6 @@ function SaveStudentInfoToDB($_db, $_student_id, $_address1, $_address2, $_addre
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
-    echo "STUDENT INFO IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
@@ -79,7 +78,6 @@ function SaveStudentSummaryToDB($_db, $_student_id, $_summary_text)
 	/* Prepared statement, stage 3: execute*/
 	if (!$stmt->execute())
 	{
-    echo "STUDENT SUMMARY IS THE CULPRIT!" . '<br  />';
 		echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 	}
 }
@@ -101,7 +99,6 @@ function SaveStudentAdditionalToDB($_db, $_student_id, $_additional_text)
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
-    echo "STUDENT ADDITIONAL IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
@@ -123,7 +120,6 @@ function SaveStudentEducationToDB($_db, $_student_id, $_school_name, $_degree_na
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
-    echo "STUDENT EDU IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
@@ -145,7 +141,6 @@ function SaveStudentExperienceToDB($_db, $_student_id, $_job_position_name, $_co
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
-    echo "STUDENT EXPERIENCE IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
@@ -167,7 +162,6 @@ function SaveStudentSkillsToDB($_db, $_student_id, $_skill_name, $_proficiency_n
   /* Prepared statement, stage 3: execute*/
   if (!$stmt->execute())
   {
-    echo "STUDENT SKILLS IS THE CULPRIT!" . '<br  />';
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 }
