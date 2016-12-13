@@ -2,12 +2,11 @@
 require_once "db_connect.php";
 require_once "function.php";
 
-if(isset($_POST['search']) && isset($_POST['skills'])) {
+if(isset($_POST['search']) && isset($_POST['skills'])){
   $search = $_POST['search'];
   $skills = $_POST['skills'];
 
-  $url = "http://localhost/main.php?email=$search&event_id=$skills";
-  header('Location: ' . $url);
+  header('Location: search.php?search=' . $search . '&skills=' . $skills . '');
 }
 
 if(isset($_POST['search']) ){
@@ -73,8 +72,17 @@ if(isset($_POST['search']) ){
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
     <script>
     $(function() {
-        $( "#skills" ).autocomplete({
+        $('#searchargs').show();
+        $('#searcharea').hide();
+
+        $( "skills" ).autocomplete({
             source: 'search.php'
+        });
+
+        $('#next').on('click', function(e) { // show next form, skills, but hide the rest!
+          e.preventDefault;
+          $('#searchargs').hide();
+          $('#searcharea').show();
         });
     });
     </script>
@@ -90,33 +98,33 @@ if(isset($_POST['search']) ){
 
     <br />
 
-    <div id="searchargs">
-      <h2>What would you like to seach for?</h2>
-      <?php echo '<form id="seachform" method="POST" action="soarsearch.php?search=' . $_POST["search"] . '">'; ?>
-        <p>
-          <select name="search">
-            <option value="blank"></option>
-            <option value="study">Area of Study</option>
-            <option value="job">Job</option>
-            <option value="skill">Skills</option>
-            <option value="degree">Degree</option>
-          </select>
-        </p>
+    <form id="seachform" method="POST">
 
-      <p><input type="submit" value="Submit!" /></p>
-      </form>
-  </div>
+      <div id="searchargs">
+        <h2>What would you like to seach for?</h2>
+          <p>
+            <select name="search">
+              <option value="blank"></option>
+              <option value="study">Area of Study</option>
+              <option value="job">Job</option>
+              <option value="skill">Skills</option>
+              <option value="degree">Degree</option>
+            </select>
+          </p>
+          <p><input type="button" id="next" value="Next!" /></p>
+        </div>
 
-  <div id="searcharea">
-    <form id="searchterms" methd="POST">
-      <table border="0" width="100%">
-        <tr>
-          <td>Search Key Words:</td>
-          <td><input type="text" id="skills" placeholder="Seacrhing for..."  /></td>
-        </tr>
-      </table>
+    <div id="searcharea">
+      <form id="searchterms" methd="POST">
+        <table border="0" width="100%">
+          <tr>
+            <td>Search Key Words:</td>
+            <td><input type="text" name="skills" placeholder="Seacrhing for..."  /></td>
+          </tr>
+        </table>
 
-      <p><input type="submit" value="Submit!" /></p>
+        <p><input type="submit" value="Submit!" /></p>
+
     </form>
 
   </div>

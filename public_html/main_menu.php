@@ -81,7 +81,7 @@ li{
     <li><button class="button" onclick="location.href='';"><span>View/Export Resume </span></button></li>
 <?php
 session_start();
-if(!$_SESSION['studentid'] == "employer" || !$_SESSION['studentid'] == "Employer")
+if($_SESSION['studentid'] != "employer" && !$_SESSION['studentid'] != "Employer")
 {
        echo "<li><button class='button' onclick='location.href='delete.php''><span> Delete Resume </span></button></li>";
 }
