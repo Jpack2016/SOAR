@@ -206,11 +206,11 @@ if(isset($_POST['school_name3'])||isset($_POST['company_name3'])||isset($_POST['
   {
     SaveRefJobPositionToDB($db, $position_name1);
   }
-  $degree_query = mysqli_query($db, "SELECT * FROM ref_degree WHERE degree_name='".$degree_name1."'");
-  if(!mysqli_num_rows($degree_query) > 0)
-  {
-    SaveRefDegreeToDB($db, $degree_name1);
-  }
+  //$degree_query = mysqli_query($db, "SELECT * FROM ref_degree WHERE degree_name='".$degree_name1."'");
+  //if(!mysqli_num_rows($degree_query) > 0)
+  //{
+  //  SaveRefDegreeToDB($db, $degree_name1);
+  //}
 
   $skill_query = mysqli_query($db, "SELECT * FROM ref_skills WHERE skill_name='".$skill_name2."'");
   if(!mysqli_num_rows($skill_query) > 0)
@@ -227,11 +227,11 @@ if(isset($_POST['school_name3'])||isset($_POST['company_name3'])||isset($_POST['
   {
     SaveRefJobPositionToDB($db, $position_name2);
   }
-  $degree_query = mysqli_query($db, "SELECT * FROM ref_degree WHERE degree_name='".$degree_name2."'");
-  if(!mysqli_num_rows($degree_query) > 0)
-  {
-    SaveRefDegreeToDB($db, $degree_name2);
-  }
+  //$degree_query = mysqli_query($db, "SELECT * FROM ref_degree WHERE degree_name='".$degree_name2."'");
+  //if(!mysqli_num_rows($degree_query) > 0)
+  //{
+  //  SaveRefDegreeToDB($db, $degree_name2);
+  //}
 
   $skill_query = mysqli_query($db, "SELECT * FROM ref_skills WHERE skill_name='".$skill_name3."'");
   if(!mysqli_num_rows($skill_query) > 0)
@@ -248,13 +248,13 @@ if(isset($_POST['school_name3'])||isset($_POST['company_name3'])||isset($_POST['
   {
     SaveRefJobPositionToDB($db, $position_name3);
   }
-  $degree_query = mysqli_query($db, "SELECT * FROM ref_degree WHERE degree_name='".$degree_name3."'");
-  if(!mysqli_num_rows($degree_query) > 0)
-  {
-    SaveRefDegreeToDB($db, $degree_name3);
-  }
+  //$degree_query = mysqli_query($db, "SELECT * FROM ref_degree WHERE degree_name='".$degree_name3."'");
+  //  if(!mysqli_num_rows($degree_query) > 0)
+  //{
+  //  SaveRefDegreeToDB($db, $degree_name3);
+  //}
 
 }
 
-header('location: main_menu.php');
+header('location: resume_doc_out.php');
 ?>

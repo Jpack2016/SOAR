@@ -79,6 +79,13 @@ li{
 <ul class="stylez">
     <li><button class="button" onclick="location.href='soarsearch.php';"><span>Search Database </span></button></li>
     <li><button class="button" onclick="location.href='';"><span>View/Export Resume </span></button></li>
+<?php
+session_start();
+if(!$_SESSION['studentid'] == "employer" || !$_SESSION['studentid'] == "Employer")
+{
+       echo "<li><button class='button' onclick='location.href='delete.php''><span> Delete Resume </span></button></li>";
+}
+?>
 </ul>
 
 </body>

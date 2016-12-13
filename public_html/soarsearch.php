@@ -2,6 +2,14 @@
 require_once "db_connect.php";
 require_once "function.php";
 
+if(isset($_POST['search']) && isset($_POST['skills'])) {
+  $search = $_POST['search'];
+  $skills = $_POST['skills'];
+
+  $url = "http://localhost/main.php?email=$search&event_id=$skills";
+  header('Location: ' . $url);
+}
+
 if(isset($_POST['search']) ){
 
   if($_POST['search'] === "study") {
@@ -84,7 +92,7 @@ if(isset($_POST['search']) ){
 
     <div id="searchargs">
       <h2>What would you like to seach for?</h2>
-      <form id="seachform" method="POST" action="soarsearch.php">
+      <?php echo '<form id="seachform" method="POST" action="soarsearch.php?search=' . $_POST["search"] . '">'; ?>
         <p>
           <select name="search">
             <option value="blank"></option>
@@ -100,8 +108,7 @@ if(isset($_POST['search']) ){
   </div>
 
   <div id="searcharea">
-
-    <form id="searchterms" methd="POST" action="search.php">
+    <form id="searchterms" methd="POST">
       <table border="0" width="100%">
         <tr>
           <td>Search Key Words:</td>
