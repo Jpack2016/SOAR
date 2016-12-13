@@ -28,15 +28,15 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 $firstname = $_SESSION['firstname'];
 $lastname = $_SESSION['lastname'];
 $email =  $_SESSION['email'];
-$student_id =  $_SESSION['studentid'];
+$student_id = $_SESSION['studentid'];
 
 $add1 = $_SESSION['address1'];
 $add2 = $_SESSION['address2'];
-$add3 = $_SESSION['address3'];
+//$add3 = $_SESSION['address3'];
 $city = $_SESSION['city'];
 $state = $_SESSION['state_code'];
 $zip = $_SESSION['zip'];
-$country = $_SESSION['country'];
+//$country = $_SESSION['country'];
 $phone = $_SESSION['phone1'];
 $phone2 = $_SESSION['phone2'];
 $summary_text = $_SESSION['summary_text'];
