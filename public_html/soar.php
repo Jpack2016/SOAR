@@ -1,3 +1,12 @@
+<?php
+session_start();
+if($_SESSION['studentid'] == "employer" || $_SESSION['studentid'] == "Employer")
+{
+	header('Location: main_menu.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

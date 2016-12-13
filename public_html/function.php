@@ -1,5 +1,4 @@
 <?php
-
 function sanitizeString($_db, $str)
 {
     $str = strip_tags($str);
@@ -270,6 +269,27 @@ function SaveRefDegreeToDB($_db, $_degree_name)
 	{
 		echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 	}
+}
+
+function SearchResults($db,$id)
+{
+  $sql = "SELECT * FROM students WHERE	student_id = '$id'";
+  $students = $db->query($sql) or die(mysql_error());
+  if ($students->num_rows > 0) {
+    while($row = $students->fetch_assoc()) {
+      $first = $row['first_name'];
+      $last = $row['last_name'];
+      $email = $row['email'];
+    }
+    echo "<tr>";
+    echo "<th>$first</th>";
+    echo "<th>$last</th>";
+    echo "<th>$id</th>";
+    echo "<th>$email</th>";
+    echo "<th>Resume</th>";
+    echo "</tr>";
+    }
+
 }
 
 ?>

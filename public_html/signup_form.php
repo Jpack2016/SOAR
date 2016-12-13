@@ -37,27 +37,27 @@ require_once('signup.php');
     <div class="divTable">
       <div class="divTR">
         <div class="divTD"><a>Email:</a></div>
-        <div class="divTD"><input type="text" name="email"></div>
+        <div class="divTD"><input type="text" name="email" required></div>
       </div>
       <div class="divTR">
         <div class="divTD"><a>Password:&nbsp;&nbsp;</a></div>
-        <div class="divTD"><input type="password" name="password"></div>
+        <div class="divTD"><input type="password" name="password" required></div>
       </div>
       <div class="divTR">
         <div class="divTD"><a>Retype password:</a></div>
-        <div class="divTD"><input type="password" name="password2"></div>
+        <div class="divTD"><input type="password" name="password2" required></div>
       </div>
       <div class="divTR">
         <div class="divTD"><a>First Name:</a></div>
-        <div class="divTD"><input type="text" name="first_name"></div>
+        <div class="divTD"><input type="text" name="first_name" required></div>
       </div>
       <div class="divTR">
         <div class="divTD"><a>Last Name:</a></div>
-        <div class="divTD"><input type="text" name="last_name"></div>
+        <div class="divTD"><input type="text" name="last_name" required></div>
       </div>
       <div class="divTR">
-        <div class="divTD"><a>Student Z Number:</a></div>
-        <div class="divTD"><input type="text" name="student_id"></div>
+        <div class="divTD"><a>Student Z Number: <br>(Use "employer if you do not have one")</a></div>
+        <div class="divTD"><input type="text" name="student_id" required></div>
       </div>
     </div>
     <input type="submit" value="Create">

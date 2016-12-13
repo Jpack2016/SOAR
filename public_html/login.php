@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 function login() {
   require_once 'db_connect.php';
   require_once 'function.php';

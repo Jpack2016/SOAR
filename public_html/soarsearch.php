@@ -1,3 +1,55 @@
+<?php
+require_once "db_connect.php";
+require_once "function.php";
+
+if(isset($_POST['search']) ){
+
+  if($_POST['search'] === "study") {
+    $sql = "SELECT study_area FROM `ref_study_area`";
+    $result = $db->query($sql) or die(mysql_error());
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        $data[] = $row['study_area'];
+      }
+    }
+  }
+
+  if($_POST['search'] === "job") {
+    $sql = "SELECT position_name FROM `ref_job_position`";
+    $result = $db->query($sql) or die(mysql_error());
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        $data[] = $row['position_name'];
+      }
+    }
+  }
+
+  if($_POST['search'] === "skill") {
+    $sql = "SELECT skill_name FROM `ref_skills`";
+    $result = $db->query($sql) or die(mysql_error());
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        $data[] = $row['skill_name'];
+      }
+    }
+  }
+
+  if($_POST['search'] === "degree") {
+    $sql = "SELECT degree_name FROM `ref_degree`";
+    $result = $db->query($sql) or die(mysql_error());
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        $data[] = $row['degree_name'];
+      }
+    }
+  }
+
+  $JsonString = json_encode($data);
+  file_put_contents('jsonFile.json', $JsonString);
+
+}
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -11,26 +63,15 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
-
-    <script type="text/javascript">
-
-        $(function() {
-            $( "#skills" ).autocomplete({
-                source: function( request, response ) {
-                    $.ajax({
-                        url: "seach.php",
-                        dataType: "jsonp",
-                        data: {
-                            q: request.term
-                        },
-                        success: function( data ) {
-                            response( data );
-                        }
-                    });
-                },
-            });
+    <script>
+    $(function() {
+        $( "#skills" ).autocomplete({
+            source: 'search.php'
         });
+    });
     </script>
+
+
 </head>
 
 <body background="background.png">
@@ -54,22 +95,28 @@
           </select>
         </p>
 
-      <p><input type="submit" value="Submit!"  /></p>
+      <p><input type="submit" value="Submit!" /></p>
       </form>
   </div>
 
   <div id="searcharea">
-    <table border="0" width="100%">
-      <tr>
-        <td>Search Key Words:</td>
-        <td><input type="text" id="skills" placeholder="Seacrhing for..."  /></td>
-      </tr>
-    </table>
+
+    <form id="searchterms" methd="POST" action="search.php">
+      <table border="0" width="100%">
+        <tr>
+          <td>Search Key Words:</td>
+          <td><input type="text" id="skills" placeholder="Seacrhing for..."  /></td>
+        </tr>
+      </table>
+
+      <p><input type="submit" value="Submit!" /></p>
+    </form>
 
   </div>
 
 </body>
 </html>
+
 
 <!--<!DOCTYPE html>
 <html lang="en">
@@ -102,11 +149,3 @@
 </body>
 
 </html>-->
-
-<?php
-
-if(isset($_POST['search']) && ($_POST['search'] !== "blank")) {
-  echo $_POST['search'];
-}
-
-?>
