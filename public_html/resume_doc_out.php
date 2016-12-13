@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Include classes
 include_once('tbs_class.php'); // Load the TinyButStrong template engine
@@ -23,16 +24,11 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 $yourname = (isset($_POST['yourname'])) ? $_POST['yourname'] : '';
 $yourname = trim(''.$yourname);
 if ($yourname=='') $yourname = "(no name)";
-/*
-$first_name = "first";
-$last_name = "last";
-$phone = "123-456-7890";
-$email =  "asdasd@kloijhfsd.com";
-$add1 = "123 asdsa st";
-$add2 = "apt 5";
-$city = "Boca";
-$state = "FL";
-$zip = "33431"; */
+
+$first_name = $_SESSION['firstname'];
+$last_name = $_SESSION['lastname'];
+$email =  $_SESSION['email'];
+$student_id =  $_SESSION['studentid'];
 
 $address1 = $_SESSION['address1'];
 $address2 = $_SESSION['address2'];
@@ -101,6 +97,7 @@ $data['employment'][] = array('location'=>'McD','position'=>'flipper','start_dat
 // -----------------
 
 $template = 'resume_template.odt';
+
 $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
 
 // ----------------------
@@ -122,16 +119,23 @@ $TBS->MergeBlock('a', $data);
 // -----------------
 
 // Define the name of the output file
-$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
-$output_file_name = str_replace('.', '_'.date('Y-m-d').$save_as.'.', $template);
-if ($save_as==='') {
+//$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
+//$output_file_name = str_replace('.', '_'.date('Y-m-d').$save_as.'.', $template);
+$out_path = "resume/";
+$output_file_name = $out_path.$student_id.".odt";
+
+$save_file_name = $student_id."-".date('Y-m-d').".odt";
+$TBS->Show(OPENTBS_FILE, $output_file_name);
+$TBS->Show(OPENTBS_DOWNLOAD, $save_file_name);
+
+//if ($save_as==='') {
 	// Output the result as a downloadable file (only streaming, no data saved in the server)
-	$TBS->Show(OPENTBS_DOWNLOAD, $output_file_name); // Also merges all [onshow] automatic fields.
+	//$TBS->Show(OPENTBS_DOWNLOAD, $output_file_name); // Also merges all [onshow] automatic fields.
 	// Be sure that no more output is done, otherwise the download file is corrupted with extra data.
-	exit();
-} else {
+	//exit();
+//} else {
 	// Output the result as a file on the server.
-	$TBS->Show(OPENTBS_FILE, $output_file_name); // Also merges all [onshow] automatic fields.
+	//$TBS->Show(OPENTBS_FILE, $output_file_name); // Also merges all [onshow] automatic fields.
 	// The script can continue.
 	exit("File [$output_file_name] has been created.");
-}
+//}
