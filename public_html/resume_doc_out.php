@@ -114,7 +114,7 @@ $degree_name2 = $_SESSION['degree_name2'];
 }
 if(isset($_SESSION['study_area2'])){$study_area2 = $_SESSION['study_area2'];}else{$study_area2 = ' ';}
 if(isset($_SESSION['graduation_month2'])){$graduation_month2 = $_SESSION['graduation_month2'];}else{ $graduation_month2 = ' ';}
-if(isset($_SESSION['graduation_year2'])){$graduation_year2 = $_SESSION['graduation_year2'];}else{ = ' ';}
+if(isset($_SESSION['graduation_year2'])){$graduation_year2 = $_SESSION['graduation_year2'];}else{ $graduation_year2 = ' ';}
 if(isset($_SESSION['job_position_name2'])){$job_position_name2 = $_SESSION['job_position_name2'];}else{$job_position_name2 = ' ';}
 if(isset($_SESSION['company_name2'])){$company_name2 = $_SESSION['company_name2'];}else{ $company_name2 = ' ';}
 if(isset($_SESSION['start_date2'])){$start_date2 = $_SESSION['start_date2'];}else{ $start_date2 = ' ';}
@@ -133,7 +133,7 @@ $degree_name1 = $_SESSION['degree_name1'];
 }
 if(isset($_SESSION['study_area1'])){$study_area1 = $_SESSION['study_area1'];}else{$study_area1 = ' ';}
 if(isset($_SESSION['graduation_month1'])){$graduation_month1 = $_SESSION['graduation_month1'];}else{ $graduation_month1 = ' ';}
-if(isset($_SESSION['graduation_year1'])){$graduation_year1 = $_SESSION['graduation_year1'];}else{ = ' ';}
+if(isset($_SESSION['graduation_year1'])){$graduation_year1 = $_SESSION['graduation_year1'];}else{$graduation_year1 = ' ';}
 if(isset($_SESSION['job_position_name1'])){$job_position_name1 = $_SESSION['job_position_name1'];}else{$job_position_name1 = ' ';}
 if(isset($_SESSION['company_name1'])){$company_name1 = $_SESSION['company_name1'];}else{ $company_name1 = ' ';}
 if(isset($_SESSION['start_date1'])){$start_date1 = $_SESSION['start_date1'];}else{ $start_date1 = ' ';}
@@ -154,7 +154,7 @@ $degree_name3 = $_SESSION['degree_name3'];
 
 if(isset($_SESSION['study_area3'])){$study_area3 = $_SESSION['study_area3'];}else{$study_area3 = ' ';}
 if(isset($_SESSION['graduation_month3'])){$graduation_month3 = $_SESSION['graduation_month3'];}else{ $graduation_month3 = ' ';}
-if(isset($_SESSION['graduation_year3'])){$graduation_year3 = $_SESSION['graduation_year3'];}else{ = ' ';}
+if(isset($_SESSION['graduation_year3'])){$graduation_year3 = $_SESSION['graduation_year3'];}else{$graduation_year3 = ' ';}
 if(isset($_SESSION['job_position_name3'])){$job_position_name3 = $_SESSION['job_position_name3'];}else{$job_position_name3 = ' ';}
 if(isset($_SESSION['company_name3'])){$company_name3 = $_SESSION['company_name3'];}else{ $company_name3 = ' ';}
 if(isset($_SESSION['start_date3'])){$start_date3 = $_SESSION['start_date3'];}else{ $start_date3 = ' ';}
