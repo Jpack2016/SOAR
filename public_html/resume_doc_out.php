@@ -24,90 +24,90 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 //$yourname = (isset($_POST['yourname'])) ? $_POST['yourname'] : '';
 //$yourname = trim(''.$yourname);
 //if ($yourname=='') $yourname = "(no name)";
-if isset($_SESSION['firstname']) {
+if (isset($_SESSION['firstname'])) {
 	$firstname = $_SESSION['firstname'];
 } else {
 	$firstname = ' ';
 }
 
-if isset($_SESSION['lastname']) {
+if (isset($_SESSION['lastname'])) {
 $lastname = $_SESSION['lastname'];
 } else {
 	$lastname = " ";
 }
 
-if isset($_SESSION['email']) {
+if (isset($_SESSION['email'])) {
 	$email =  $_SESSION['email'];
 } else {
 	$email = " ";
 }
 
-if isset($_SESSION['studentid']) {
+if (isset($_SESSION['studentid'])) {
 	$student_id = $_SESSION['studentid'];
 }else {
 	$student_id = " ";
 }
 
-if isset($_SESSION['address1']) {
+if (isset($_SESSION['address1'])) {
 	$add1 = $_SESSION['address1'];
 } else {
 	$add1 = " ";
 }
 
-if isset($_SESSION['address2']) {
+if (isset($_SESSION['address2'])) {
 	$add2 = $_SESSION['address2'];
 } else {
 	$add2 = " ";
 }
 //$add3 = $_SESSION['address3'];
-if isset($_SESSION['city']) {
+if (isset($_SESSION['city'])) {
 $city = $_SESSION['city'];
 } else {
 	$city;
 }
 
-if isset($_SESSION['state_code']) {
+if (isset($_SESSION['state_code'])) {
 $state = $_SESSION['state_code'];
 } else {
 	$state = ' ';
 }
-if isset($_SESSION['zip']) {
+if (isset($_SESSION['zip'])) {
 	$zip = $_SESSION['zip'];
 } else {
 	$zip = " ";
 }
 
-if isset($_SESSION['phone1']) {
+if (isset($_SESSION['phone1'])) {
 //$country = $_SESSION['country'];
 $phone = $_SESSION['phone1'];
 } else {
 	$phone = " " ;
 }
-if isset($_SESSION['phone2']) {
+if (isset($_SESSION['phone2'])) {
 //$country = $_SESSION['country'];
 $phone = $_SESSION['phone2'];
 } else {
 	$phone = " " ;
 }
 
-if isset($_SESSION['summary_text']) {
+if (isset($_SESSION['summary_text'])) {
 	$summary_text = $_SESSION['summary_text'];
 } else {
 	$summary_text = " ";
 }
 
-if isset($_SESSION['additional_text']) {
+if (isset($_SESSION['additional_text'])) {
 	$additional_text = $_SESSION['additional_text'];
 } else {
 	$additional_text = " ";
 }
 
-if isset($_SESSION['school_name2']) {
+if (isset($_SESSION['school_name2'])) {
 $school_name2 = $_SESSION['school_name2'];
 } else {
     $school_name2 = " ";
 }
-if isset($_SESSION['degree_name2']) {
+if (isset($_SESSION['degree_name2'])) {
 $degree_name2 = $_SESSION['degree_name2'];
 } else {
     $degree_name2 = " ";
@@ -121,12 +121,12 @@ if(isset($_SESSION['start_date2'])){$start_date2 = $_SESSION['start_date2'];}els
 if(isset($_SESSION['end_date2'])){$end_date2 = $_SESSION['end_date2'];}else{ $end_date2 = ' ';}
 if(isset($_SESSION['skill_name2'])){$skill_name2 = $_SESSION['skill_name2'];}else{ $skill_name2 = ' ';}
 if(isset($_SESSION['proficiency_name2'])){$proficiency_name2 = $_SESSION['proficiency_name2'];}else{ $proficiency_name2 = ' ';}
-if isset($_SESSION['school_name1']) {
+if (isset($_SESSION['school_name1'])) {
 $school_name1 = $_SESSION['school_name1'];
 } else {
     $school_name1 = " ";
 }
-if isset($_SESSION['degree_name1']) {
+if (isset($_SESSION['degree_name1'])) {
 $degree_name1 = $_SESSION['degree_name1'];
 } else {
     $degree_name1 = " ";
@@ -141,12 +141,12 @@ if(isset($_SESSION['end_date1'])){$end_date1 = $_SESSION['end_date1'];}else{ $en
 if(isset($_SESSION['skill_name1'])){$skill_name1 = $_SESSION['skill_name1'];}else{ $skill_name1 = ' ';}
 if(isset($_SESSION['proficiency_name1'])){$proficiency_name1 = $_SESSION['proficiency_name1'];}else{ $proficiency_name1 = ' ';}
 
-if isset($_SESSION['school_name3']) {
+if (isset($_SESSION['school_name3'])) {
 $school_name3 = $_SESSION['school_name3'];
 } else {
     $school_name3 = " ";
 }
-if isset($_SESSION['degree_name3']) {
+if (isset($_SESSION['degree_name3'])) {
 $degree_name3 = $_SESSION['degree_name3'];
 } else {
     $degree_name3 = " ";
