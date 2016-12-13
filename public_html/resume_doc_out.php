@@ -196,7 +196,7 @@ if (isset($_POST['debug']) && ($_POST['debug']=='show'))    $TBS->Plugin(OPENTBS
 // --------------------------------------------
 
 // Merge data in the body of the document
-$TBS->MergeBlock('a', $data);
+$TBS->MergeBlock('a');
 
 // -----------------
 // Output the result
