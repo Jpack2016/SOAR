@@ -21,9 +21,9 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 // ------------------------------
 
 // Retrieve the user name to display
-$yourname = (isset($_POST['yourname'])) ? $_POST['yourname'] : '';
-$yourname = trim(''.$yourname);
-if ($yourname=='') $yourname = "(no name)";
+//$yourname = (isset($_POST['yourname'])) ? $_POST['yourname'] : '';
+//$yourname = trim(''.$yourname);
+//if ($yourname=='') $yourname = "(no name)";
 
 $first_name = $_SESSION['firstname'];
 $last_name = $_SESSION['lastname'];
