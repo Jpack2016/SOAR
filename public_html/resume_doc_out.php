@@ -205,13 +205,13 @@ $TBS->MergeBlock('a', $data);
 
 // Define the name of the output file
 $save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
-$output_file_name = str_replace('.', ''.date('Y-m-d').$save_as.'.', $template);
+//$output_file_name = str_replace('.', ''.date('Y-m-d').$save_as.'.', $template);
 //$out_path = "resume/";
-//$output_file_name = $out_path.$student_id.".odt";
+$output_file_name = $student_id.".odt";
 //-$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
-//-$output_file_name = str_replace('.', '_'.$save_as.'.', $template);
+//$output_file_name = str_replace('.', '_'.$save_as.'.', $template);
 
-//$save_file_name = $student_id."-".date('Y-m-d').".odt";
+$save_file_name = $student_id."-".date('Y-m-d').".odt";
 //$TBS->Show(OPENTBS_FILE, $output_file_name);
 //$TBS->Show(OPENTBS_DOWNLOAD, $save_file_name);
 
@@ -222,7 +222,8 @@ $output_file_name = str_replace('.', ''.date('Y-m-d').$save_as.'.', $template);
 	//exit();
 //} else {
 	// Output the result as a file on the server.
-	//$TBS->Show(OPENTBS_FILE, $out_path.$student_id.$output_file_name); // Also merges all [onshow] automatic fields.
+	$TBS->Show(OPENTBS_FILE, $out_path.$student_id.$output_file_name); // Also merges all [onshow] automatic fields.
 	// The script can continue.
 	//exit("File [$output_file_name] has been created.");
+	header('Location: main_menu.php');
 //}
