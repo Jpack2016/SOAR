@@ -204,12 +204,12 @@ $TBS->MergeBlock('a', $data);
 // -----------------
 
 // Define the name of the output file
-$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
+//$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
 //$output_file_name = str_replace('.', ''.date('Y-m-d').$save_as.'.', $template);
-//$out_path = "resume/";
-$output_file_name = $student_id.".odt";
-//-$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
-//$output_file_name = str_replace('.', '_'.$save_as.'.', $template);
+$out_path = "resume/";
+//$output_file_name = $out_path.$student_id.".odt";
+$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
+$output_file_name = str_replace('.', '_'.$save_as.'.', $template);
 
 $save_file_name = $student_id."-".date('Y-m-d').".odt";
 //$TBS->Show(OPENTBS_FILE, $output_file_name);
