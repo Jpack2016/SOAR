@@ -27,37 +27,37 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 if (isset($_SESSION['firstname'])) {
 	$firstname = $_SESSION['firstname'];
 } else {
-	$firstname = '_';
+	$firstname = '';
 }
 
 if (isset($_SESSION['lastname'])) {
 $lastname = $_SESSION['lastname'];
 } else {
-	$lastname = "_";
+	$lastname = "";
 }
 
 if (isset($_SESSION['email'])) {
 	$email =  $_SESSION['email'];
 } else {
-	$email = "_";
+	$email = "";
 }
 
 if (isset($_SESSION['studentid'])) {
 	$student_id = $_SESSION['studentid'];
 }else {
-	$student_id = "_";
+	$student_id = "";
 }
 
 if (isset($_SESSION['address1'])) {
 	$add1 = $_SESSION['address1'];
 } else {
-	$add1 = "_";
+	$add1 = "";
 }
 
 if (isset($_SESSION['address2'])) {
 	$add2 = $_SESSION['address2'];
 } else {
-	$add2 = "_";
+	$add2 = "";
 }
 //$add3 = $_SESSION['address3'];
 if (isset($_SESSION['city'])) {
@@ -69,12 +69,12 @@ $city = $_SESSION['city'];
 if (isset($_SESSION['state_code'])) {
 $state = $_SESSION['state_code'];
 } else {
-	$state = '_';
+	$state = '';
 }
 if (isset($_SESSION['zip'])) {
 	$zip = $_SESSION['zip'];
 } else {
-	$zip = "_";
+	$zip = "";
 }
 
 if (isset($_SESSION['phone1'])) {
@@ -93,74 +93,74 @@ $phone = $_SESSION['phone2'];
 if (isset($_SESSION['summary_text'])) {
 	$summary_text = $_SESSION['summary_text'];
 } else {
-	$summary_text = "_";
+	$summary_text = "";
 }
 
 if (isset($_SESSION['additional_text'])) {
 	$additional_text = $_SESSION['additional_text'];
 } else {
-	$additional_text = "_";
+	$additional_text = "";
 }
 
 if (isset($_SESSION['school_name2'])) {
 $school_name2 = $_SESSION['school_name2'];
 } else {
-    $school_name2 = "_";
+    $school_name2 = "";
 }
 if (isset($_SESSION['degree_name2'])) {
 $degree_name2 = $_SESSION['degree_name2'];
 } else {
-    $degree_name2 = "_";
+    $degree_name2 = "";
 }
-if(isset($_SESSION['study_area2'])){$study_area2 = $_SESSION['study_area2'];}else{$study_area2 = '_';}
-if(isset($_SESSION['graduation_month2'])){$graduation_month2 = $_SESSION['graduation_month2'];}else{ $graduation_month2 = '_';}
-if(isset($_SESSION['graduation_year2'])){$graduation_year2 = $_SESSION['graduation_year2'];}else{ $graduation_year2 = '_';}
-if(isset($_SESSION['job_position_name2'])){$job_position_name2 = $_SESSION['job_position_name2'];}else{$job_position_name2 = '_';}
-if(isset($_SESSION['company_name2'])){$company_name2 = $_SESSION['company_name2'];}else{ $company_name2 = '_';}
-if(isset($_SESSION['start_date2'])){$start_date2 = $_SESSION['start_date2'];}else{ $start_date2 = '_';}
-if(isset($_SESSION['end_date2'])){$end_date2 = $_SESSION['end_date2'];}else{ $end_date2 = '_';}
-if(isset($_SESSION['skill_name2'])){$skill_name2 = $_SESSION['skill_name2'];}else{ $skill_name2 = '_';}
-if(isset($_SESSION['proficiency_name2'])){$proficiency_name2 = $_SESSION['proficiency_name2'];}else{ $proficiency_name2 = '_';}
+if(isset($_SESSION['study_area2'])){$study_area2 = $_SESSION['study_area2'];}else{$study_area2 = '';}
+if(isset($_SESSION['graduation_month2'])){$graduation_month2 = $_SESSION['graduation_month2'];}else{ $graduation_month2 = '';}
+if(isset($_SESSION['graduation_year2'])){$graduation_year2 = $_SESSION['graduation_year2'];}else{ $graduation_year2 = '';}
+if(isset($_SESSION['job_position_name2'])){$job_position_name2 = $_SESSION['job_position_name2'];}else{$job_position_name2 = '';}
+if(isset($_SESSION['company_name2'])){$company_name2 = $_SESSION['company_name2'];}else{ $company_name2 = '';}
+if(isset($_SESSION['start_date2'])){$start_date2 = $_SESSION['start_date2'];}else{ $start_date2 = '';}
+if(isset($_SESSION['end_date2'])){$end_date2 = $_SESSION['end_date2'];}else{ $end_date2 = '';}
+if(isset($_SESSION['skill_name2'])){$skill_name2 = $_SESSION['skill_name2'];}else{ $skill_name2 = '';}
+if(isset($_SESSION['proficiency_name2'])){$proficiency_name2 = $_SESSION['proficiency_name2'];}else{ $proficiency_name2 = '';}
 if (isset($_SESSION['school_name1'])) {
 $school_name1 = $_SESSION['school_name1'];
 } else {
-    $school_name1 = "_";
+    $school_name1 = "";
 }
 if (isset($_SESSION['degree_name1'])) {
 $degree_name1 = $_SESSION['degree_name1'];
 } else {
-    $degree_name1 = "_";
+    $degree_name1 = "";
 }
-if(isset($_SESSION['study_area1'])){$study_area1 = $_SESSION['study_area1'];}else{$study_area1 = '_';}
-if(isset($_SESSION['graduation_month1'])){$graduation_month1 = $_SESSION['graduation_month1'];}else{ $graduation_month1 = '_';}
-if(isset($_SESSION['graduation_year1'])){$graduation_year1 = $_SESSION['graduation_year1'];}else{$graduation_year1 = '_';}
-if(isset($_SESSION['job_position_name1'])){$job_position_name1 = $_SESSION['job_position_name1'];}else{$job_position_name1 = '_';}
-if(isset($_SESSION['company_name1'])){$company_name1 = $_SESSION['company_name1'];}else{ $company_name1 = '_';}
-if(isset($_SESSION['start_date1'])){$start_date1 = $_SESSION['start_date1'];}else{ $start_date1 = '_';}
-if(isset($_SESSION['end_date1'])){$end_date1 = $_SESSION['end_date1'];}else{ $end_date1 = '_';}
-if(isset($_SESSION['skill_name1'])){$skill_name1 = $_SESSION['skill_name1'];}else{ $skill_name1 = '_';}
-if(isset($_SESSION['proficiency_name1'])){$proficiency_name1 = $_SESSION['proficiency_name1'];}else{ $proficiency_name1 = '_';}
+if(isset($_SESSION['study_area1'])){$study_area1 = $_SESSION['study_area1'];}else{$study_area1 = '';}
+if(isset($_SESSION['graduation_month1'])){$graduation_month1 = $_SESSION['graduation_month1'];}else{ $graduation_month1 = '';}
+if(isset($_SESSION['graduation_year1'])){$graduation_year1 = $_SESSION['graduation_year1'];}else{$graduation_year1 = '';}
+if(isset($_SESSION['job_position_name1'])){$job_position_name1 = $_SESSION['job_position_name1'];}else{$job_position_name1 = '';}
+if(isset($_SESSION['company_name1'])){$company_name1 = $_SESSION['company_name1'];}else{ $company_name1 = '';}
+if(isset($_SESSION['start_date1'])){$start_date1 = $_SESSION['start_date1'];}else{ $start_date1 = '';}
+if(isset($_SESSION['end_date1'])){$end_date1 = $_SESSION['end_date1'];}else{ $end_date1 = '';}
+if(isset($_SESSION['skill_name1'])){$skill_name1 = $_SESSION['skill_name1'];}else{ $skill_name1 = '';}
+if(isset($_SESSION['proficiency_name1'])){$proficiency_name1 = $_SESSION['proficiency_name1'];}else{ $proficiency_name1 = '';}
 
 if (isset($_SESSION['school_name3'])) {
 $school_name3 = $_SESSION['school_name3'];
 } else {
-    $school_name3 = "_";
+    $school_name3 = "";
 }
 if (isset($_SESSION['degree_name3'])) {
 $degree_name3 = $_SESSION['degree_name3'];
 } else {
-    $degree_name3 = "_";
+    $degree_name3 = "";
 }
 
-if(isset($_SESSION['study_area3'])){$study_area3 = $_SESSION['study_area3'];}else{$study_area3 = '_';}
-if(isset($_SESSION['graduation_month3'])){$graduation_month3 = $_SESSION['graduation_month3'];}else{ $graduation_month3 = '_';}
-if(isset($_SESSION['graduation_year3'])){$graduation_year3 = $_SESSION['graduation_year3'];}else{$graduation_year3 = '_';}
-if(isset($_SESSION['job_position_name3'])){$job_position_name3 = $_SESSION['job_position_name3'];}else{$job_position_name3 = '_';}
-if(isset($_SESSION['company_name3'])){$company_name3 = $_SESSION['company_name3'];}else{ $company_name3 = '_';}
-if(isset($_SESSION['start_date3'])){$start_date3 = $_SESSION['start_date3'];}else{ $start_date3 = '_';}
-if(isset($_SESSION['end_date3'])){$end_date3 = $_SESSION['end_date3'];}else{ $end_date3 = '_';}
-if(isset($_SESSION['skill_name3'])){$skill_name3 = $_SESSION['skill_name3'];}else{ $skill_name3 = '_';}
-if(isset($_SESSION['proficiency_name3'])){$proficiency_name3 = $_SESSION['proficiency_name3'];}else{ $proficiency_name3 = '_';}
+if(isset($_SESSION['study_area3'])){$study_area3 = $_SESSION['study_area3'];}else{$study_area3 = '';}
+if(isset($_SESSION['graduation_month3'])){$graduation_month3 = $_SESSION['graduation_month3'];}else{ $graduation_month3 = '';}
+if(isset($_SESSION['graduation_year3'])){$graduation_year3 = $_SESSION['graduation_year3'];}else{$graduation_year3 = '';}
+if(isset($_SESSION['job_position_name3'])){$job_position_name3 = $_SESSION['job_position_name3'];}else{$job_position_name3 = '';}
+if(isset($_SESSION['company_name3'])){$company_name3 = $_SESSION['company_name3'];}else{ $company_name3 = '';}
+if(isset($_SESSION['start_date3'])){$start_date3 = $_SESSION['start_date3'];}else{ $start_date3 = '';}
+if(isset($_SESSION['end_date3'])){$end_date3 = $_SESSION['end_date3'];}else{ $end_date3 = '';}
+if(isset($_SESSION['skill_name3'])){$skill_name3 = $_SESSION['skill_name3'];}else{ $skill_name3 = '';}
+if(isset($_SESSION['proficiency_name3'])){$proficiency_name3 = $_SESSION['proficiency_name3'];}else{ $proficiency_name3 = '';}
 
 // A recordset for merging tables
 
@@ -205,9 +205,11 @@ $TBS->MergeBlock(a, $data);
 
 // Define the name of the output file
 //$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
-//$output_file_name = str_replace('.', '_'.date('Y-m-d').$save_as.'.', $template);
+//$output_file_name = str_replace('.', ''.date('Y-m-d').$save_as.'.', $template);
 $out_path = "resume/";
-$output_file_name = $out_path.$student_id.".odt";
+//$output_file_name = $out_path.$student_id.".odt";
+$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
+$output_file_name = str_replace('.', '_'.$save_as.'.', $template);
 
 $save_file_name = $student_id."-".date('Y-m-d').".odt";
 $TBS->Show(OPENTBS_FILE, $output_file_name);
