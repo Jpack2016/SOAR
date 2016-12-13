@@ -163,9 +163,10 @@ if(isset($_SESSION['skill_name3'])){$skill_name3 = $_SESSION['skill_name3'];}els
 if(isset($_SESSION['proficiency_name3'])){$proficiency_name3 = $_SESSION['proficiency_name3'];}else{ $proficiency_name3 = '_';}
 
 // A recordset for merging tables
-/*
+
 $data = array();
 $data['education'] = array();
+/*
 $data['education'][] = array('inst'=>'FAU','major'=>'CE','start_date'=>'12/01/14','end_date'=>'06/01/17');
 $data['skills'] = array();
 $data['skills'][] = array('skill_name'=>'C++','prof_level'=>'Intermediate');
@@ -196,7 +197,7 @@ if (isset($_POST['debug']) && ($_POST['debug']=='show'))    $TBS->Plugin(OPENTBS
 // --------------------------------------------
 
 // Merge data in the body of the document
-$TBS->MergeBlock();
+$TBS->MergeBlock(a, $data);
 
 // -----------------
 // Output the result
