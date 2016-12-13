@@ -211,7 +211,7 @@ $output_file_name = str_replace('.', ''.date('Y-m-d').$save_as.'.', $template);
 //$save_as = (isset($_POST['save_as']) && (trim($_POST['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_POST['save_as']) : '';
 //$output_file_name = str_replace('.', '_'.$save_as.'.', $template);
 
-$save_file_name = $student_id."-".date('Y-m-d').".odt";
+//$save_file_name = $student_id."-".date('Y-m-d').".odt";
 //$TBS->Show(OPENTBS_FILE, $output_file_name);
 //$TBS->Show(OPENTBS_DOWNLOAD, $save_file_name);
 
