@@ -47,8 +47,8 @@
       require_once "function.php";
       session_start();
 
-      if($_POST['search'] == "study" && isset($_POST['skills'])) {
-        $term = $_POST['skills'];
+      if($_get['search'] == "study" && isset($_get['skills'])) {
+        $term = $_get['skills'];
         $sql = "SELECT student_id FROM student_education WHERE study_area LIKE '$term'";
         $result = $db->query($sql) or die(mysql_error());
         if ($result->num_rows > 0) {
@@ -66,8 +66,8 @@
 
       }
 
-      if($_POST['search'] == "job" && isset($_POST['skills'])) {
-        $term = $_POST['skills'];
+      if($_get['search'] == "job" && isset($_get['skills'])) {
+        $term = $_get['skills'];
         $sql = "SELECT student_id FROM student_experience WHERE job_position_name LIKE '$term'";
         $result = $db->query($sql) or die(mysql_error());
         if ($result->num_rows > 0) {
@@ -85,8 +85,8 @@
 
       }
 
-      if($_POST['search'] == "skill" && isset($_POST['skills'])) {
-        $term = $_POST['skills'];
+      if($_get['search'] == "skill" && isset($_get['skills'])) {
+        $term = $_get['skills'];
         $sql = "SELECT student_id FROM student_skills WHERE	proficiency_name LIKE '$term'";
         $result = $db->query($sql) or die(mysql_error());
         if ($result->num_rows > 0) {
@@ -104,8 +104,8 @@
 
       }
 
-      if($_POST['search'] == "degree" && isset($_POST['skills'])) {
-        $term = $_POST['skills'];
+      if($_get['search'] == "degree" && isset($_get['skills'])) {
+        $term = $_get['skills'];
         $sql = "SELECT student_id FROM student_education WHERE degree_name LIKE 'bachelors'";
         $result = $db->query($sql) or die(mysql_error());
         if ($result->num_rows > 0) {
